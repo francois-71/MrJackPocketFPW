@@ -1,5 +1,5 @@
 public enum Players {
-    DETECTIVE("Detective"), MRJACK("MrJack",);
+    DETECTIVE("Detective"), MRJACK("MrJack");
     int jeton;
     private String name;
 
