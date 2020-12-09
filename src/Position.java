@@ -4,9 +4,9 @@ public class Position {
 
     private int colonne;
 
-    private int sens;
+    private Sens sens;
 
-    public Position(int ligne, int colonne, int sens) {
+    public Position(int ligne, int colonne, Sens sens) {
         this.ligne = ligne;
         this.colonne = colonne;
         this.sens = sens;
@@ -28,11 +28,11 @@ public class Position {
         this.colonne = colonne;
     }
 
-    public int getSens() {
+    public Sens getSens() {
         return sens;
     }
 
-    public void setSens(int sens) {
+    public void setSens(Sens sens) {
         this.sens = sens;
     }
 
@@ -41,6 +41,10 @@ public class Position {
                 && position.ligne == this.ligne
                 && position.sens == this.sens;
 
+    }
+
+    public enum Sens {
+        NORD, SUD, EST, WEST
     }
 
 }

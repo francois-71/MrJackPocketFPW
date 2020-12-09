@@ -3,9 +3,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayersTest {
     @Test
-    public void testAjoutJetonDonne1(){
-        Players.DETECTIVE.addJeton();
-        assertEquals(1, Players.DETECTIVE.jeton, "Ajoute ne marche pas");
-    }
+    public void renvoiDetective() {
+        assertEquals("Detective",Players.DETECTIVE.getName(), "ne m'a pas renvoyé Detective");
+}
+
+
 
 }
