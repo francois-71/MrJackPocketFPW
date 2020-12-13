@@ -7,6 +7,6 @@ class PileAlibiTest {
     @Test
     void tirerUneCarte() {
         PileAlibi pile = new PileAlibi();
-        System.out.println(pile.tirerUneCarte().ordinal());
+        System.out.println(pile.tirerUneCarte());
     }
 }

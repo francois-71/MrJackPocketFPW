@@ -1,7 +1,6 @@
 // Type de structure de donnée ? Pile, arrayDeque
-import java.util.ArrayDeque;
 
-public enum Alibi {
+public enum AlibiName {
     LESTRADE(0,0),
     STEALTHY(1,0),
     BERT(1,0),
@@ -15,7 +14,7 @@ public enum Alibi {
     private final int sabliers;
     private final int image; // TODO ajouter les images
 
-    Alibi(int sabliers, int image) {
+    AlibiName(int sabliers, int image) {
         this.sabliers = sabliers;
         this.image = image;
     }

@@ -5,15 +5,15 @@ import java.util.List;
 
 public class PileAlibi {
 
-    private final ArrayDeque<Alibi> pile;
+    private final ArrayDeque<AlibiName> pile;
 
     public PileAlibi() {
-        List<Alibi> listeAlibi = Arrays.asList(Alibi.values());
+        List<AlibiName> listeAlibi = Arrays.asList(AlibiName.values());
         Collections.shuffle(listeAlibi);
         this.pile = new ArrayDeque(listeAlibi);
 
     }
-    public Alibi tirerUneCarte(){
+    public AlibiName tirerUneCarte(){
         return this.pile.pollFirst();
     }
 
