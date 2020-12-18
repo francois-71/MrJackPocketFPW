@@ -1,10 +1,12 @@
 public class PlayerMrJack extends Player{
 
-    PileAlibi mrJackAlibiCard = new PileAlibi();
+    PileAlibi mrJackAlibiCard;
 
-    public void setMrJackAlibiCard(){
+    public AlibiName pickMrJackChar(){
+        return mrJackAlibiCard.tirerUneCarte();
 
     }
+
 
 
 }

@@ -1,2 +1,2 @@
-public class Jeton {
+public abstract class Jeton {
 }
