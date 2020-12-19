@@ -3,7 +3,7 @@
 import java.rmi.UnexpectedException;
 import java.util.*;
 
-public enum AlibiName {
+public enum AlibiName implements PositionableObject{
     LESTRADE(0,0),
     STEALTHY(1,0),
     BERT(1,0),

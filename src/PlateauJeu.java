@@ -21,7 +21,23 @@ public enum PlateauJeu {
         public AlibiName[][] getTableau() {
             return tableau.clone();
         }
+        public Optional<PositionableObject>[][] getExtentedBoard(List<Detective> detectives){
+            Object[][] board = new Object[5][5];
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 5; j++) {
+                    board[i][j]=Optional.empty();
+                }
+            }
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    board[i+1][j+1] = Optional.of(this.tableau[i][j]);
+
+                }
+            }
+            return (Optional<PositionableObject>[][]) board.clone();
+        }
     }
+
     private PlateauJack currentBoard;
     PlateauJeu() {
         AlibiName.shuffle();
