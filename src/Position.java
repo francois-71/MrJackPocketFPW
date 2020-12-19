@@ -12,6 +12,13 @@ public class Position {
         this.sens = sens;
     }
 
+    public Position(int i, int j) {
+        this(i,j,Sens.NORD);
+        // this.sens = ...
+
+
+    }
+
     public int getLigne() {
         return ligne;
     }

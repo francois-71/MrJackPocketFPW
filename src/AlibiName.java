@@ -1,5 +1,8 @@
 // Type de structure de donnée ? Pile, arrayDeque
 
+import java.rmi.UnexpectedException;
+import java.util.*;
+
 public enum AlibiName {
     LESTRADE(0,0),
     STEALTHY(1,0),
@@ -13,10 +16,19 @@ public enum AlibiName {
 
     private final int sabliers;
     private final int image; // TODO ajouter les images
+    private Optional<Position> position;
 
     AlibiName(int sabliers, int image) {
         this.sabliers = sabliers;
         this.image = image;
+        this.position = Optional.empty();
+    }
+
+    public static void echangerPosition(AlibiName p1, AlibiName p2) {
+        Position x1 = p1.getPosition();
+        Position x2 = p2.getPosition();
+        p2.setPosition(x1);
+        p1.setPosition(x2);
     }
 
     public int getSabliers() {
@@ -25,5 +37,26 @@ public enum AlibiName {
 
     public int getImage() {
         return image;
+    }
+    public AlibiName setPosition(Position p){
+        this.position = Optional.of(p);
+        return this;
+    }
+    public Position getPosition(){
+        if (!this.position.isPresent()) throw new UnsupportedOperationException("Erreur le joueur n'a pas de position");
+        return this.position.get();
+    }
+    public static AlibiName[] shuffle(){
+        List<AlibiName> listeAlibi = Arrays.asList(values());
+        Collections.shuffle(listeAlibi);
+        ArrayDeque<AlibiName> deck = new ArrayDeque(listeAlibi);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                deck.pollFirst().setPosition(new Position(i,j));
+
+            }
+
+        }
+        return values();
     }
 }

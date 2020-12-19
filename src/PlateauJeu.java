@@ -1,33 +1,40 @@
 import java.util.*;
 
-public class PlateauJeu {
+public enum PlateauJeu {
 
-    private AlibiName[][] tableau = new AlibiName[3][3]; // INITIALISE UN TABLEAU VIDE 3X3
-    private final ArrayList<AlibiName> listAlibis; // ON CREER UNE ARRAYLIST DE TYPE ALIBINAME
+    PLATEAU;
+    class PlateauJack{
+        private AlibiName[][] tableau = new AlibiName[3][3]; // INITIALISE UN TABLEAU VIDE 3X3
 
-    public PlateauJeu() {
-        List<AlibiName> listAlibis = Arrays.asList(AlibiName.values()); // ON CREER UNE LISTE DE TOUS LES ALIBIS
-        Collections.shuffle(listAlibis); // ON MELANGE AU HASARD CETTE LISTE
-        this.listAlibis = new ArrayList(listAlibis); //
+        public PlateauJack(AlibiName[] alibis) {
+            for (AlibiName alibi : alibis) {
+                Position p = alibi.getPosition();
+                tableau[p.getLigne()][p.getColonne()] = alibi;
+            }
+
+        }
+        public AlibiName getAlibi(int x, int y){
+            return tableau[x][y];
+
+        }
+
+        public AlibiName[][] getTableau() {
+            return tableau.clone();
+        }
+    }
+    private PlateauJack currentBoard;
+    PlateauJeu() {
+        AlibiName.shuffle();
+        updateBoard();
+    }
+    public void updateBoard(){
+        this.currentBoard = new PlateauJack(AlibiName.values());
     }
 
-    public AlibiName[][] printBoard() {
-        int k = 0;
-        for (int i = 0; i <= 2; i++) {
-            for (int j = 0; j <= 2; j++) {
-                tableau[i][j] = listAlibis.get(k); // PLACE UN ALIBI PAR CASE
-                k += 1;
-            }
-        }
-        for (AlibiName[] line : tableau) { // PRINT DU TABLEAU
-            for (AlibiName cell : line) {
-                System.out.print(cell + " ");
-            }
-            System.out.println();
-        }
-        return null;
-    }
+    public void printBoard() {
+        for (AlibiName[] ligne : currentBoard.getTableau())
+            System.out.println(Arrays.toString(ligne));
 
-
+        }
 
 }

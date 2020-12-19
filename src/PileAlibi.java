@@ -17,5 +17,7 @@ public class PileAlibi {
         return this.pile.pollFirst();
     }
 
-
+    public ArrayDeque<AlibiName> getPile() {
+        return pile;
+    }
 }
