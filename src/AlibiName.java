@@ -1,5 +1,3 @@
-// Type de structure de donnée ? Pile, arrayDeque
-
 import java.rmi.UnexpectedException;
 import java.util.*;
 
@@ -38,14 +36,17 @@ public enum AlibiName implements PositionableObject{
     public int getImage() {
         return image;
     }
+
     public AlibiName setPosition(Position p){
         this.position = Optional.of(p);
         return this;
     }
+
     public Position getPosition(){
         if (!this.position.isPresent()) throw new UnsupportedOperationException("Erreur le joueur n'a pas de position");
         return this.position.get();
     }
+
     public static AlibiName[] shuffle(){
         List<AlibiName> listeAlibi = Arrays.asList(values());
         Collections.shuffle(listeAlibi);
@@ -53,9 +54,7 @@ public enum AlibiName implements PositionableObject{
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 deck.pollFirst().setPosition(new Position(i,j));
-
             }
-
         }
         return values();
     }
