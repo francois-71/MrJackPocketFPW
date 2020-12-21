@@ -1,4 +1,3 @@
-import java.rmi.UnexpectedException;
 import java.util.*;
 
 public enum AlibiName implements PositionableObject{
@@ -22,7 +21,7 @@ public enum AlibiName implements PositionableObject{
         this.position = Optional.empty();
     }
 
-    public static void echangerPosition(AlibiName p1, AlibiName p2) {
+    public static void echangerPositionAlibi(AlibiName p1, AlibiName p2) {
         Position x1 = p1.getPosition();
         Position x2 = p2.getPosition();
         p2.setPosition(x1);

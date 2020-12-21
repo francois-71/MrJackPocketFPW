@@ -4,11 +4,11 @@ public enum PlateauJeu {
 
     PLATEAU;
     class PlateauJack{
-        private AlibiName[][] tableau = new AlibiName[3][3]; // INITIALISE UN TABLEAU VIDE 3X3
+        private AlibiName[][] tableau = new AlibiName[3][3]; // Initialise un tableau vide 3X3
 
-        public PlateauJack(AlibiName[] alibis) {
-            for (AlibiName alibi : alibis) {
-                Position p = alibi.getPosition();
+        public PlateauJack(AlibiName[] alibis) {     // Constructeur du tableau.
+            for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
+                Position p = alibi.getPosition();    // On attribue une position p
                 tableau[p.getLigne()][p.getColonne()] = alibi;
             }
 
@@ -21,6 +21,7 @@ public enum PlateauJeu {
         public AlibiName[][] getTableau() {
             return tableau.clone();
         }
+
         public Optional<PositionableObject>[][] getExtentedBoard(List<Detective> detectives){
             Object[][] board = new Object[5][5];
             for (int i = 0; i < 5; i++) {
@@ -34,6 +35,9 @@ public enum PlateauJeu {
 
                 }
             }
+            for (int i = 5; i < 2; i++) {
+
+            }
             return (Optional<PositionableObject>[][]) board.clone();
         }
     }
@@ -41,6 +45,7 @@ public enum PlateauJeu {
     private PlateauJack currentBoard;
     PlateauJeu() {
         AlibiName.shuffle();
+        //Detective.placerDetective();
         updateBoard();
     }
     public void updateBoard(){

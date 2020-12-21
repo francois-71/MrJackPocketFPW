@@ -24,7 +24,7 @@ public class JetonRotationTuile extends Jeton{
 
         } while((nomPiece2 == nomPiece1) || (!listAlibis.toString().contains(nomPiece2)));
 
-        AlibiName.echangerPosition(AlibiName.valueOf(nomPiece1), AlibiName.valueOf(nomPiece2));
+        AlibiName.echangerPositionAlibi(AlibiName.valueOf(nomPiece1), AlibiName.valueOf(nomPiece2));
     }
 
 }
