@@ -7,7 +7,7 @@ class PlateauJeuTest {
     void PlateauJeu() {
         PlateauJeu monJeu = PlateauJeu.PLATEAU;
         monJeu.printBoard();
-        AlibiName.echangerPositionAlibi(AlibiName.LESTRADE, AlibiName.STEALTHY);
+        AlibiName.echangerPositionAlibi(AlibiName.SMITH, AlibiName.STEALTHY);
         monJeu.updateBoard();
         monJeu.printBoard();
     }

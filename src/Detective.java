@@ -38,6 +38,7 @@ public enum Detective implements PositionableObject {
     }
     public static void deplacerDetective(Detective d) {
         Position x1 = d.getPosition();
+    }
 
 
 }

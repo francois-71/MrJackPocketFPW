@@ -6,7 +6,6 @@ class DetectiveTest {
 
     void Detective() {
         Detective.placerDetective();
-        System.out.println(Detective.TOBY.getPosition());
-        Detective.deplacerDetective(D
+        System.out.println(Detective.HOLMES.getPosition().getLigne());
     }
 }
