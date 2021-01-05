@@ -40,9 +40,20 @@ public enum PlateauJeu {
                     board[i + 1][j + 1] = Optional.of(this.tableau[i][j]); // Initialise le tableau avec les emplacements des alibis
                 }
             }
-            for
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 5; j++) {
+                    if (tableau2[i][j] == Detective.HOLMES){
+                        board[i][j] = Optional.of(this.tableau2[i][j]);
+                    }
+                    else if (tableau2[i][j] == Detective.TOBY){
+                        board[i][j] = Optional.of(this.tableau2[i][j]);
+                    }
+                    else if (tableau2[i][j] == Detective.WATSON){
+                        board[i][j] = Optional.of(this.tableau2[i][j]);
+                    }
+                }
 
-
+            }
 
             return board.clone();
         }
@@ -62,7 +73,7 @@ public enum PlateauJeu {
     public void printBoard() {
         for (Optional<PositionableObject>[] ligne : currentBoard.getExtendedBoard())
             System.out.println(Arrays.toString(ligne));
+    }
 
-        }
 
 }

@@ -29,9 +29,9 @@ public enum Detective implements PositionableObject {
     }
     public static Detective[] placerDetective(){
         List <Detective> detectives = Arrays.asList(values());
-        Detective.HOLMES.setPosition(new Position(1,0));
-        Detective.WATSON.setPosition(new Position(1,4));
-        Detective.TOBY.setPosition(new Position(4,2));
+        Detective.HOLMES.setPosition(new Position(1,0, Position.Sens.WEST));
+        Detective.WATSON.setPosition(new Position(1,4,Position.Sens.EAST));
+        Detective.TOBY.setPosition(new Position(4,2,Position.Sens.SOUTH));
         return values();
 
 

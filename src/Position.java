@@ -1,3 +1,8 @@
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Position {
 
     private int ligne;
@@ -12,12 +17,6 @@ public class Position {
         this.sens = sens;
     }
 
-    public Position(int i, int j) {
-        this(i,j,Sens.NORD);
-        // this.sens = ...
-
-
-    }
 
     public int getLigne() {
         return ligne;
@@ -51,7 +50,12 @@ public class Position {
     }
 
     public enum Sens {
-        NORD, SUD, EST, WEST
+        NORTH, SOUTH, EAST, WEST
     }
+    public void shuffleSens() {
+        List<Position.Sens> sensRandom = Arrays.asList(sens.values());
+        Collections.shuffle(sensRandom);
+        ArrayDeque<AlibiName> deck = new ArrayDeque(sensRandom);
 
+    }
 }
