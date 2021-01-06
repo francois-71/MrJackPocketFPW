@@ -7,7 +7,7 @@ public enum PlateauJeu {
         private AlibiName[][] tableau = new AlibiName[3][3]; // Initialise un tableau vide 3X3
         private Detective[][] tableau2 = new Detective[5][5];
 
-        public PlateauMrJack(AlibiName[] alibis, Detective[] detectives) {     // Constructeur du tableau.
+        public PlateauMrJack(AlibiName[] alibis, Detective[] detectives) {
             for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
                 Position p = alibi.getPosition();    // On attribue une position p
                 tableau[p.getLigne()][p.getColonne()] = alibi;
@@ -67,13 +67,17 @@ public enum PlateauJeu {
         updateBoard();
     }
     public void updateBoard(){
+
         this.currentBoard = new PlateauMrJack(AlibiName.values(), Detective.values());
     }
 
     public void printBoard() {
         for (Optional<PositionableObject>[] ligne : currentBoard.getExtendedBoard())
             System.out.println(Arrays.toString(ligne));
+
+
+        }
     }
 
 
-}
+

@@ -11,10 +11,13 @@ public class Position {
 
     private Sens sens;
 
-    public Position(int ligne, int colonne, Sens sens) {
+    private Returned etatTuile;
+
+    public Position(int ligne, int colonne, Sens sens, Returned etatTuile) {
         this.ligne = ligne;
         this.colonne = colonne;
         this.sens = sens;
+        this.etatTuile = etatTuile;
     }
 
 
@@ -42,6 +45,14 @@ public class Position {
         this.sens = sens;
     }
 
+    public Returned getEtatTuile() {
+        return etatTuile;
+    }
+
+    public void setEtatTuile(Returned etatTuile) {
+        this.etatTuile = etatTuile;
+    }
+
     public boolean equals(Position position) {
         return position.getColonne() == this.getColonne()
                 && position.ligne == this.ligne
@@ -52,10 +63,7 @@ public class Position {
     public enum Sens {
         NORTH, SOUTH, EAST, WEST
     }
-    public void shuffleSens() {
-        List<Position.Sens> sensRandom = Arrays.asList(sens.values());
-        Collections.shuffle(sensRandom);
-        ArrayDeque<AlibiName> deck = new ArrayDeque(sensRandom);
-
+    public enum Returned{
+        INGAME, RETURNED;
     }
 }

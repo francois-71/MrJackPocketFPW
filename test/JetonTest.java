@@ -9,10 +9,11 @@ class JetonTest {
     void Jeton() {
         PlateauJeu monJeu = PlateauJeu.PLATEAU;
         monJeu.printBoard();
-        JetonRotationTuile a = new JetonRotationTuile();
+        JetonEchangeTuile a = new JetonEchangeTuile();
         a.action();
         //AlibiName.echangerPosition(AlibiName.LESTRADE, AlibiName.STEALTHY);
         monJeu.updateBoard();
+        System.out.println(" ");
         monJeu.printBoard();
     }
 }
