@@ -22,7 +22,7 @@ public enum PlateauJeu {
 
         }
 
-        public AlibiName[][] getTableau() { // Méthode qui renvoie un clone du tableau
+        public AlibiName[][] getTableau() {
             return tableau.clone();
             //List<Detective> detectives
         }

@@ -32,8 +32,61 @@ public enum Detective implements PositionableObject {
         Detective.WATSON.setPosition(new Position(1,4,Position.Sens.EAST, Position.Returned.INGAME));
         Detective.TOBY.setPosition(new Position(4,2,Position.Sens.SOUTH, Position.Returned.INGAME));
         return values();
+    }
 
+    public static void move1of3Characters(Detective p1, int mouvement){
 
+        Position x1 = p1.getPosition();
+        if (mouvement == 1){
+            if (x1.getLigne() == 1 && x1.getColonne() == 0){
+                x1.setLigne(0);
+                x1.setColonne(1);
+            }
+            else if (x1.getLigne() == 0 && x1.getColonne() == 1){
+                x1.setLigne(0);
+                x1.setColonne(2);
+            }
+            else if (x1.getLigne() == 0 && x1.getColonne() == 2){
+                x1.setLigne(0);
+                x1.setColonne(3);
+            }
+            else if (x1.getLigne() == 0 && x1.getColonne() == 3) {
+                x1.setLigne(1);
+                x1.setColonne(4);
+            }
+            else if (x1.getLigne() == 1 && x1.getColonne() == 4){
+                x1.setLigne(2);
+                x1.setColonne(4);
+            }
+            else if (x1.getLigne() == 2 && x1.getColonne() == 4){
+                x1.setLigne(3);
+                x1.setColonne(4);
+            }
+            else if (x1.getLigne() == 3 && x1.getColonne() == 4){
+                x1.setLigne(4);
+                x1.setColonne(3);
+            }
+            else if (x1.getLigne() == 4 && x1.getColonne() == 3){
+                x1.setLigne(4);
+                x1.setColonne(2);
+            }
+            else if (x1.getLigne() == 4 && x1.getColonne() == 2){
+                x1.setLigne(4);
+                x1.setColonne(1);
+            }
+            else if (x1.getLigne() == 4 && x1.getColonne() == 1){
+                x1.setLigne(3);
+                x1.setColonne(0);
+            }
+            else if (x1.getLigne() == 3 && x1.getColonne() == 0){
+                x1.setLigne(2);
+                x1.setColonne(0);
+            }
+            else if (x1.getLigne() == 2 && x1.getColonne() == 0){
+                x1.setLigne(1);
+                x1.setColonne(0);
+            }
+        }
     }
     public static void deplacerDetective(Detective d) {
         Position x1 = d.getPosition();

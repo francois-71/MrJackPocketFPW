@@ -37,18 +37,16 @@ public enum AlibiName implements PositionableObject{
 
         p2.setPosition(x1);
         p1.setPosition(x2);
-
-
     }
 
     public static void tournerTuile(AlibiName p1) {
         Position x1 = p1.getPosition();
         x1.setEtatTuile(Position.Returned.RETURNED);
-
     }
 
-    public static void rotationTuile(AlibiName p1) {
-
+    public static void rotationTuile(AlibiName p1, Position.Sens s1) {
+        Position x1 = p1.getPosition();
+        x1.setSens(s1);
     }
 
     public int getSabliers() {
