@@ -61,9 +61,9 @@ public class Position {
     }
 
     public enum Sens {
-        NORTH, SOUTH, EAST, WEST
+        NORTH, SOUTH, EAST, WEST, AUCUN;
     }
     public enum Returned{
-        INGAME, RETURNED;
+        INGAME, RETURNED, NONE;
     }
 }

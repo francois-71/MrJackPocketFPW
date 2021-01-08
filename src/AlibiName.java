@@ -42,10 +42,27 @@ public enum AlibiName implements PositionableObject{
     public static void tournerTuile(AlibiName p1) {
         Position x1 = p1.getPosition();
         x1.setEtatTuile(Position.Returned.RETURNED);
+        if (p1 == AlibiName.LANE) {
+            x1.setSens(Position.Sens.AUCUN);
+        }
+
+
     }
 
     public static void rotationTuile(AlibiName p1, Position.Sens s1) {
         Position x1 = p1.getPosition();
+        //if (x1.getSens() == Position.Sens.NORTH) {
+        //    x1.setSens(Position.Sens.EAST);
+        //}
+        //else if (x1.getSens() == Position.Sens.EAST) {
+        //    x1.setSens(Position.Sens.SOUTH);
+        //}
+        //else if (x1.getSens() == Position.Sens.SOUTH) {
+        //    x1.setSens(Position.Sens.WEST);
+        //}
+        //else if (x1.getSens() == Position.Sens.WEST) {
+        //    x1.setSens(Position.Sens.NORTH);
+        //}
         x1.setSens(s1);
     }
 
@@ -85,13 +102,14 @@ public enum AlibiName implements PositionableObject{
                     deck.pollFirst().setPosition(new Position(i,j,Position.Sens.NORTH,Position.Returned.INGAME)); // initialise la tuile pour que TOBY soit face au mur
                 }
                 else{
-                    List<Position.Sens> sensRandom = Arrays.asList(Position.Sens.values()); // mélange la liste d'orientation
+                    List<Position.Sens> sensRandom = Arrays.asList(Position.Sens.EAST, Position.Sens.NORTH, Position.Sens.SOUTH, Position.Sens.WEST);
                     Collections.shuffle(sensRandom);
                     deck.pollFirst().setPosition(new Position(i, j, sensRandom.get(1), Position.Returned.INGAME)); // Positione le reste des cartes avec une orientation aléatoire
                 }
 
             }
         }
+
         return values();
     }
 }

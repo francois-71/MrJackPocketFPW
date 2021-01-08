@@ -6,6 +6,8 @@ public enum PlateauJeu {
     class PlateauMrJack{
         private AlibiName[][] tableau = new AlibiName[3][3]; // Initialise un tableau vide 3X3
         private Detective[][] tableau2 = new Detective[5][5];
+        private HashSet <Detective> placementDouble = new HashSet <Detective>();
+
 
         public PlateauMrJack(AlibiName[] alibis, Detective[] detectives) {
             for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
