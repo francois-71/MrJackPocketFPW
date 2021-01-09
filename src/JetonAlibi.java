@@ -12,14 +12,11 @@ public class JetonAlibi extends Jeton{
 
         do{
             //System.out.println("Saisir l'alibi à retourner"); //TODO Remplacer nomPiece1, nomPiece2 par un scanner(les noms sont fixés pour tester la classe avec JUNIT)
-            nomPiece = "LANE";
+            nomPiece = "PIZER";
 
         } while(!listAlibis.toString().contains(nomPiece));
 
         AlibiName.tournerTuile(AlibiName.valueOf(nomPiece));
-
-
-
     }
 
 

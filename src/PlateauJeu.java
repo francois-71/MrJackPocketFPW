@@ -32,12 +32,12 @@ public enum PlateauJeu {
 
 
         public Set<PositionableObject>[][] getExtendedBoard() {
-            HashSet<PositionableObject>[][] board = new HashSet<PositionableObject>[5][5];
+            HashSet<PositionableObject>[][] board = new HashSet[5][5];
 
 
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) { //Initialise le tableau sans valeurs à l'intérieur des cellules
-                    board[i][j] = new HashSet<PositionableObject>();
+                    board[i][j] = new HashSet<>();
                 }
             }
             for (int i = 0; i < 3; i++) {

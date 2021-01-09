@@ -15,8 +15,8 @@ public class JetonEchangeTuile extends Jeton{
         List<AlibiName> listAlibis = Arrays.asList(AlibiName.values()); // ici faux, car la liste ne tient pas compte des eventuels joueurs qui ont été sup avant
 
         do{
-            //System.out.println("Saisir l'alibi à déplacer"); //TODO Remplacer nomPiece1, nomPiece2 par un scanner(les noms sont fixés pour tester la classe avec JUNIT);
-            nomPiece1 = "BERT";
+            System.out.println("Saisir l'alibi à déplacer"); //TODO Remplacer nomPiece1, nomPiece2 par un scanner(les noms sont fixés pour tester la classe avec JUNIT);
+            nomPiece1 = "STEALTHY";
 
         } while(!listAlibis.toString().contains(nomPiece1));
         do{
