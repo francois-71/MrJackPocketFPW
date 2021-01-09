@@ -1,25 +1,26 @@
+import java.sql.Array;
 import java.util.*;
 
 public enum PlateauJeu {
 
     PLATEAU;
-    class PlateauMrJack{
-        private AlibiName[][] tableau = new AlibiName[3][3]; // Initialise un tableau vide 3X3
-        private Detective[][] tableau2 = new Detective[5][5];
-        private HashSet <Detective> placementDouble = new HashSet <Detective>();
 
+    class PlateauMrJack {
+        private final AlibiName[][] tableau = new AlibiName[3][3]; // Initialise un tableau vide 3X3
+        private final Detective[][] tableau2 = new Detective[5][5];
 
         public PlateauMrJack(AlibiName[] alibis, Detective[] detectives) {
             for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
                 Position p = alibi.getPosition();    // On attribue une position p
                 tableau[p.getLigne()][p.getColonne()] = alibi;
             }
-            for (Detective detective: detectives){
+            for (Detective detective : detectives) {
                 Position p = detective.getPosition();
                 tableau2[p.getLigne()][p.getColonne()] = detective;
             }
         }
-        public AlibiName getAlibi(int x, int y){ // Méthode qui retourne la position des alibis
+
+        public AlibiName getAlibi(int x, int y) { // Méthode qui retourne la position des alibis
             return tableau[x][y];
 
         }
@@ -30,28 +31,29 @@ public enum PlateauJeu {
         }
 
 
-        public Optional<PositionableObject>[][] getExtendedBoard() {
-            Optional<PositionableObject>[][] board = new Optional[5][5]; // Crée un tableau de type Objet 5x5
+        public Set<PositionableObject>[][] getExtendedBoard() {
+            HashSet<PositionableObject>[][] board = new HashSet<PositionableObject>[5][5];
+
+
             for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 5; j++) {
-                    board[i][j] = Optional.empty(); // Initialise le tableau sans valeurs à l'intérieur des cellules
+                for (int j = 0; j < 5; j++) { //Initialise le tableau sans valeurs à l'intérieur des cellules
+                    board[i][j] = new HashSet<PositionableObject>();
                 }
             }
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
-                    board[i + 1][j + 1] = Optional.of(this.tableau[i][j]); // Initialise le tableau avec les emplacements des alibis
+                    board[i + 1][j + 1].add(this.tableau[i][j]); // Initialise le tableau avec les emplacements des alibis
                 }
             }
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
-                    if (tableau2[i][j] == Detective.HOLMES){
-                        board[i][j] = Optional.of(this.tableau2[i][j]);
-                    }
-                    else if (tableau2[i][j] == Detective.TOBY){
-                        board[i][j] = Optional.of(this.tableau2[i][j]);
-                    }
-                    else if (tableau2[i][j] == Detective.WATSON){
-                        board[i][j] = Optional.of(this.tableau2[i][j]);
+                    if (tableau2[i][j] == Detective.HOLMES) {
+                        board[i][j].add(this.tableau2[i][j]);
+                    } else if (tableau2[i][j] == Detective.TOBY) {
+                        board[i][j].add(this.tableau2[i][j]);
+                    } else if (tableau2[i][j] == Detective.WATSON) {
+                        board[i][j].add(this.tableau2[i][j]);
+
                     }
                 }
 
@@ -68,18 +70,21 @@ public enum PlateauJeu {
         Detective.placerDetective(); // place les detectives
         updateBoard();
     }
-    public void updateBoard(){
+
+    public void updateBoard() {
 
         this.currentBoard = new PlateauMrJack(AlibiName.values(), Detective.values());
     }
 
     public void printBoard() {
-        for (Optional<PositionableObject>[] ligne : currentBoard.getExtendedBoard())
-            System.out.println(Arrays.toString(ligne));
-
-
+        for (Set<PositionableObject>[] ligne : currentBoard.getExtendedBoard()) {
+            System.out.println(" ");
+            for (Set<PositionableObject> cell : ligne) {
+                System.out.print(cell +" ");
+            }
         }
     }
+}
 
 
 

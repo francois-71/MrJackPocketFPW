@@ -15,14 +15,14 @@ public class JetonRotationTuile extends Jeton{
         List<Position.Sens> listSens = Arrays.asList(Position.Sens.values());
 
         do {
-            System.out.println("saisir le nom de la tuile à déplacer");
+            //System.out.println("saisir le nom de la tuile à déplacer");
             nomTuile = "BERT";
         } while(!listAlibis.toString().contains(nomTuile));
 
-        System.out.println("Le sens initial de " + nomTuile + " est " + AlibiName.BERT.getPosition().getSens());
+        //System.out.println("Le sens initial de " + nomTuile + " est " + AlibiName.BERT.getPosition().getSens());
 
         do {
-            System.out.println("Tapez le sens (NORTH, SOUTH, EAST ou WEST)");
+            //System.out.println("Tapez le sens (NORTH, SOUTH, EAST ou WEST)");
             sensTuile = "SOUTH";
 
         } while(!listSens.toString().contains(sensTuile));

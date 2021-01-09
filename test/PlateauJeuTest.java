@@ -17,9 +17,11 @@ class PlateauJeuTest {
         c.action();
         //Jeton d = new Jeton3Personnages();
         //d.action();
-        //Detective.move1of3Characters(Detective.TOBY,1);
-        //Detective.move1of3Characters(Detective.TOBY,1);
-        System.out.println("hello");
+
+
+
+
+
 
 
 
