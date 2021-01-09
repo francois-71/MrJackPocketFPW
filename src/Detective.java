@@ -233,9 +233,9 @@ public enum Detective implements PositionableObject {
         }
         //HashSet<AlibiName> listVisible = new HashSet<>();
         System.out.println("la liste des gens visible est " + listVisible);
-        System.out.println(p2.getSens());
-        System.out.println(p5.getSens());
-        System.out.println(p8.getSens());
+        System.out.println(p3.getSens());
+        System.out.println(p6.getSens());
+        System.out.println(p9.getSens());
         //for (AlibiName ligne : listVisible) {
         //    System.out.println(ligne + " ");
         //}

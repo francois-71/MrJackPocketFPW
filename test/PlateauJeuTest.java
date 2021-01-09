@@ -19,12 +19,18 @@ class PlateauJeuTest {
         a.action();
         Jeton c = new JetonRotationTuile();
         c.action();
+
+         */
         Jeton d = new Jeton3Personnages();
         d.action();
-        */
+        d.action();
+        d.action();
 
-        Jeton e = new JetonDeplacerHOLMES();
-        e.action();
+
+
+
+        //Jeton e = new JetonDeplacerHOLMES();
+        //e.action();
         /*
         Jeton f = new JetonDeplacerWATSON();
         f.action();
