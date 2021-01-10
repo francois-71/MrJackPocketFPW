@@ -17,7 +17,7 @@ public class Jeton3Personnages extends Jeton{
         do {
             System.out.println("Choisir le detective à déplacer: TOBY, HOLMES ou WATSON"); // Rajouter le choix des personnages
             //String detective = scanner.nextLine();
-            detective = "HOLMES";
+            detective = "TOBY";
         }while(!listDetective.toString().contains(detective));
 
         System.out.println("Vous avez choisi de déplacer " + detective);

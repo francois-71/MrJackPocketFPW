@@ -21,10 +21,15 @@ class PlateauJeuTest {
         c.action();
 
          */
-        Jeton d = new Jeton3Personnages();
-        d.action();
-        d.action();
-        d.action();
+        //Jeton d = new Jeton3Personnages();
+
+        //d.action();
+
+        //Jeton f = new JetonDeplacerWATSON();
+        //f.action();
+
+
+
 
 
 
