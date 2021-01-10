@@ -1,7 +1,6 @@
 public abstract class Tour {
 
     public int tourCount(){ //TODO Implementer cette classe ici
-        return +1;
         //TODO Rajouter un sablier à MrJack
         //TODO Vérifier que MrJack ne possède pas 6 sabliers
         //TODO Arrêter la partie si nb de sabliers =8

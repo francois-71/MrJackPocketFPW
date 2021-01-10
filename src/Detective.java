@@ -389,7 +389,7 @@ public enum Detective implements PositionableObject {
                 }
             }
         }
-        FIN COTE GAUCHE
+        //FIN COTE GAUCHE
 
         System.out.println("la liste des gens visible est " + listVisible);
         System.out.println(p1.getSens());
