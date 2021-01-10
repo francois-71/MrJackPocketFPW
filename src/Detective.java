@@ -185,6 +185,8 @@ public enum Detective implements PositionableObject {
         Position p8 = tableau[2][1].getPosition();
         Position p9 = tableau[2][2].getPosition();
 
+
+        //DEBUT COTE HAUT
         if ((Detective.HOLMES.getPosition().getLigne() == 0 && Detective.HOLMES.getPosition().getColonne() == 1) ||
                 (Detective.WATSON.getPosition().getLigne() == 0 && Detective.WATSON.getPosition().getColonne() == 1) ||
                 (Detective.TOBY.getPosition().getLigne() == 0 && Detective.TOBY.getPosition().getColonne() == 1)) {
@@ -233,9 +235,9 @@ public enum Detective implements PositionableObject {
                 }
             }
         }
-        //FIN DU COTE HAUT
-        //DEBUT DU COTE EST
+        //FIN COTE HAUT
 
+        //DEBUT COTE DROIT
         if ((Detective.HOLMES.getPosition().getLigne() == 1 && Detective.HOLMES.getPosition().getColonne() == 4) ||
                 (Detective.WATSON.getPosition().getLigne() == 1 && Detective.WATSON.getPosition().getColonne() == 4) ||
                 (Detective.TOBY.getPosition().getLigne() == 1 && Detective.TOBY.getPosition().getColonne() == 4)) {
@@ -285,8 +287,8 @@ public enum Detective implements PositionableObject {
             }
         }
         //FIN COTE DROIT
-        //DEBUT COTE BAS
 
+        //DEBUT COTE BAS
         if ((Detective.HOLMES.getPosition().getLigne() == 4 && Detective.HOLMES.getPosition().getColonne() == 3) ||
                 (Detective.WATSON.getPosition().getLigne() == 4 && Detective.WATSON.getPosition().getColonne() == 3) ||
                 (Detective.TOBY.getPosition().getLigne() == 4 && Detective.TOBY.getPosition().getColonne() == 3)) {
@@ -335,8 +337,9 @@ public enum Detective implements PositionableObject {
                 }
             }
         }
+
         //FIN COTE BAS
-        //DEBUT COTE NORD
+        //DEBUT COTE GAUCHE
 
         if ((Detective.HOLMES.getPosition().getLigne() == 3 && Detective.HOLMES.getPosition().getColonne() == 0) ||
                 (Detective.WATSON.getPosition().getLigne() == 3 && Detective.WATSON.getPosition().getColonne() == 0) ||
@@ -386,6 +389,7 @@ public enum Detective implements PositionableObject {
                 }
             }
         }
+        FIN COTE GAUCHE
 
         System.out.println("la liste des gens visible est " + listVisible);
         System.out.println(p1.getSens());
