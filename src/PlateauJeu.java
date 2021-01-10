@@ -53,22 +53,43 @@ public enum PlateauJeu {
                         board[i][j].add(this.tableau2[i][j]);
                     } else if (tableau2[i][j] == Detective.WATSON) {
                         board[i][j].add(this.tableau2[i][j]);
-
                     }
                 }
-
             }
-
             return board.clone();
         }
     }
 
-    private PlateauMrJack currentBoard;
+    public PlateauMrJack currentBoard;
+
+
+    int tourCount;
 
     PlateauJeu() {
-        AlibiName.shuffle(); // place les alibis dans un ordre aléatoire
+        AlibiName.placerAlibi(); // place les alibis dans un ordre aléatoire
         Detective.placerDetective(); // place les detectives
+        PlayerMrJack.setMrJackCard();
         updateBoard();
+        printBoard();
+        while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6){ // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
+
+            if (tourCount % 2 != 0){
+                Tour action = new TourImpair();
+
+
+
+                // Detective qui commence
+            }
+            else {
+                Tour action = new TourPair();
+               // MrJack qui commence
+
+            }
+        }
+
+
+
+
     }
 
     public void updateBoard() {
@@ -83,6 +104,9 @@ public enum PlateauJeu {
                 System.out.print(cell +" ");
             }
         }
+    }
+    public void askMove(){
+
     }
 }
 

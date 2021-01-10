@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PileAlibi {
 
-    private final ArrayDeque<AlibiName> pile;
+    public ArrayDeque<AlibiName> pile;
 
     public PileAlibi() {
         List<AlibiName> listeAlibi = Arrays.asList(AlibiName.values());

@@ -84,7 +84,7 @@ public enum AlibiName implements PositionableObject{
         return this.position.get();
     }
 
-    public static AlibiName[] shuffle(){
+    public static AlibiName[] placerAlibi(){
         List<AlibiName> listeAlibi = Arrays.asList(values());
         Collections.shuffle(listeAlibi);
         ArrayDeque<AlibiName> deck = new ArrayDeque(listeAlibi);

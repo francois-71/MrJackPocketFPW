@@ -1,6 +1,28 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public abstract class Tour {
 
-    public int tourCount(){ //TODO Implementer cette classe ici
+    Jeton jeton3Personnages = new Jeton3Personnages();
+    Jeton jetonAlibi = new JetonAlibi();
+    Jeton jetonDeplacerHOLMES = new JetonDeplacerHOLMES();
+    Jeton jetonDeplacerTOBY = new JetonDeplacerTOBY();
+    Jeton jetonDeplacerWATSON = new JetonDeplacerWATSON();
+    Jeton jetonEchangeTuile = new JetonEchangeTuile();
+    Jeton jetonRotationTuile1 = new JetonRotationTuile();
+    Jeton jetonRotationTuile2 = new JetonRotationTuile();
+
+    public List <Jeton> jetonShuffle(){
+        List<Jeton> listeJetons = Arrays.asList(jeton3Personnages, jetonAlibi, jetonDeplacerHOLMES,
+                jetonDeplacerTOBY, jetonDeplacerWATSON, jetonEchangeTuile, jetonRotationTuile1,
+                jetonRotationTuile2);
+        Collections.shuffle(listeJetons);
+        return listeJetons;
+
+    }
+
+    public void tourCount(){ //TODO Implementer cette classe ici
         //TODO Rajouter un sablier à MrJack
         //TODO Vérifier que MrJack ne possède pas 6 sabliers
         //TODO Arrêter la partie si nb de sabliers =8

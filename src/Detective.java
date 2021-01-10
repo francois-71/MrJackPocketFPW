@@ -1,5 +1,3 @@
-import com.sun.corba.se.impl.orb.NormalDataCollector;
-
 import java.util.*;
 
 public enum Detective implements PositionableObject {
@@ -166,10 +164,10 @@ public enum Detective implements PositionableObject {
 
     }
 
-    public static void isVisible(AlibiName[] alibis) {
+    public static HashSet<AlibiName> isVisible(AlibiName[] alibis) {
 
         HashSet<AlibiName> listVisible = new HashSet<>();
-        HashSet<String> listNotVisible = new HashSet<>();
+        HashSet<AlibiName> listNotVisible = new HashSet<>();
         AlibiName[][] tableau = new AlibiName[3][3];
         for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
             Position p = alibi.getPosition();    // On attribue une position p
@@ -391,10 +389,11 @@ public enum Detective implements PositionableObject {
         }
         //FIN COTE GAUCHE
 
-        System.out.println("la liste des gens visible est " + listVisible);
-        System.out.println(p1.getSens());
-        System.out.println(p2.getSens());
-        System.out.println(p3.getSens());
+        //System.out.println("la liste des gens visible est " + listVisible);
+        //System.out.println(p1.getSens());
+        //System.out.println(p2.getSens());
+        //System.out.println(p3.getSens());
+        return listVisible;
 
     }
 

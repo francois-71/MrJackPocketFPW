@@ -3,12 +3,32 @@ import org.junit.jupiter.api.Test;
 
 class PlateauJeuTest {
     @Test
-
     void PlateauJeu() {
         PlateauJeu monJeu = PlateauJeu.PLATEAU;
+
+        /*
+        System.out.println(" ");
+        Jeton a = new JetonAlibi();
+        a.action();
+        PlayerMrJack.sablierAddFinTour();
+        System.out.println(PlayerMrJack.getSablier());
+
+        monJeu.updateBoard();
+        System.out.println(" ");
+        System.out.println(Detective.isVisible(AlibiName.values()));
+        System.out.println(" ");
         monJeu.printBoard();
 
-        System.out.println(" ");
+         */
+
+
+
+        //System.out.println(PlayerMrJack.getMrJackCard());
+
+    }
+}
+
+
 
         /*
 
@@ -38,21 +58,10 @@ class PlateauJeuTest {
         //e.action();
         /*
         Jeton f = new JetonDeplacerWATSON();
-        f.action();
-        Jeton g = new JetonDeplacerTOBY();
-        g.action();
 
-         */
-
-
-
-
-
-
-        //Jeton d = new Jeton3Personnages();
-        //d.action();
         monJeu.updateBoard();
-        Detective.isVisible(AlibiName.values());
+        System.out.println(" ");
+        System.out.println(Detective.isVisible(AlibiName.values()));
         System.out.println(" ");
         monJeu.printBoard();
 
@@ -60,3 +69,5 @@ class PlateauJeuTest {
 
     }
 }
+
+         */
