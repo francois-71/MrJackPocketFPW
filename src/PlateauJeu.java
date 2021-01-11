@@ -63,18 +63,29 @@ public enum PlateauJeu {
     public PlateauMrJack currentBoard;
 
 
+
     int tourCount;
 
     PlateauJeu() {
+
         AlibiName.placerAlibi(); // place les alibis dans un ordre aléatoire
         Detective.placerDetective(); // place les detectives
         PlayerMrJack.setMrJackCard();
         updateBoard();
         printBoard();
+        Tour a = new TourImpair();
+        a.jouerTour();
+
+
+        /*
+
+
+
         while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6){ // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
 
             if (tourCount % 2 != 0){
                 Tour action = new TourImpair();
+                action.jouerTour
 
 
 
@@ -86,6 +97,12 @@ public enum PlateauJeu {
 
             }
         }
+
+         */
+        updateBoard();
+        printBoard();
+
+
 
 
 

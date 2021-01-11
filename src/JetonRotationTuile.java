@@ -32,4 +32,9 @@ public class JetonRotationTuile extends Jeton{
 
 
     }
+
+    @Override
+    public void getName() {
+        System.out.println("Jeton Rotation d'une Tuile");
+    }
 }

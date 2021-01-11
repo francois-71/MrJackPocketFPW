@@ -4,6 +4,7 @@ import java.util.List;
 
 public abstract class Tour {
 
+
     Jeton jeton3Personnages = new Jeton3Personnages();
     Jeton jetonAlibi = new JetonAlibi();
     Jeton jetonDeplacerHOLMES = new JetonDeplacerHOLMES();
@@ -13,14 +14,24 @@ public abstract class Tour {
     Jeton jetonRotationTuile1 = new JetonRotationTuile();
     Jeton jetonRotationTuile2 = new JetonRotationTuile();
 
-    public List <Jeton> jetonShuffle(){
-        List<Jeton> listeJetons = Arrays.asList(jeton3Personnages, jetonAlibi, jetonDeplacerHOLMES,
-                jetonDeplacerTOBY, jetonDeplacerWATSON, jetonEchangeTuile, jetonRotationTuile1,
-                jetonRotationTuile2);
+    List<Jeton> listeJetons = Arrays.asList(jeton3Personnages, jetonAlibi, jetonDeplacerHOLMES,
+            jetonDeplacerTOBY, jetonDeplacerWATSON, jetonEchangeTuile, jetonRotationTuile1,
+            jetonRotationTuile2);
+
+
+
+    public void jetonShuffle(){
         Collections.shuffle(listeJetons);
-        return listeJetons;
 
     }
+    public List <Jeton> listeJeton(){
+        return listeJetons;
+    }
+    public abstract void jouerTour();
+
+
+
+
 
     public void tourCount(){ //TODO Implementer cette classe ici
         //TODO Rajouter un sablier à MrJack

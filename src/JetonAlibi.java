@@ -22,6 +22,10 @@ public class JetonAlibi extends Jeton{
 
     }
 
+    @Override
+    public void getName() {
+        System.out.println("Jeton Alibi");
+    }
 
 
 }

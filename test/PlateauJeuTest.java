@@ -1,15 +1,26 @@
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.util.StringUtils;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 
 class PlateauJeuTest {
     @Test
     void PlateauJeu() {
+
+
         PlateauJeu monJeu = PlateauJeu.PLATEAU;
 
+
+
+
+
+
+
+
         /*
-        System.out.println(" ");
-        Jeton a = new JetonAlibi();
-        a.action();
         PlayerMrJack.sablierAddFinTour();
         System.out.println(PlayerMrJack.getSablier());
 

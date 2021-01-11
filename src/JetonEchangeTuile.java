@@ -28,4 +28,9 @@ public class JetonEchangeTuile extends Jeton{
         AlibiName.echangerPositionAlibi(AlibiName.valueOf(nomPiece1), AlibiName.valueOf(nomPiece2));
     }
 
+    @Override
+    public void getName() {
+        System.out.println("Jeton Echange Tuile");
+    }
+
 }

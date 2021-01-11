@@ -11,7 +11,7 @@ public class JetonDeplacerWATSON extends Jeton{
         System.out.println("Vous avez choisi de déplacer " + detective);
 
         do {
-            System.out.println("De combien de case souhaitez vous déplacer " + detective + " ? Saisir '0' pour qu'il ne bouge pas, '1' pour le faire avancer d'une case Sens horaire");
+            System.out.println("De combien de case souhaitez vous déplacer " + detective + " ? Saisir '1' pour qu'il ne bouge pas, '2' pour le faire avancer d'une case Sens horaire");
             //String  deplacement = scanner.nextLine();
             deplacement = "2";
 
@@ -21,5 +21,10 @@ public class JetonDeplacerWATSON extends Jeton{
         System.out.println("le deplacement est " + deplacement);
 
         Detective.move1Character(Detective.valueOf(detective), Integer.parseInt(deplacement));
+    }
+
+    @Override
+    public void getName() {
+        System.out.println("Jeton Deplacer Detective WATSON");
     }
 }

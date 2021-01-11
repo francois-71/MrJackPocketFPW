@@ -34,4 +34,9 @@ public class Jeton3Personnages extends Jeton{
     Detective.move1of3Characters(Detective.valueOf(detective), Integer.parseInt(deplacement));
     }
 
+    @Override
+    public void getName(){
+        System.out.println("Jeton Deplacer 1 des 3 Detectives");
+    }
+
 }
