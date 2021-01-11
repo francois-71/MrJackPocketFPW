@@ -70,6 +70,7 @@ public enum AlibiName implements PositionableObject{
         return sabliers;
     }
 
+
     public int getImage() {
         return image;
     }

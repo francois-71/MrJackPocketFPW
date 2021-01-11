@@ -2,7 +2,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public abstract class Tour {
+public class Tour {
+
+    private static String player;
+
 
 
 
@@ -19,17 +22,16 @@ public abstract class Tour {
             jetonDeplacerTOBY, jetonDeplacerWATSON, jetonEchangeTuile, jetonRotationTuile1,
             jetonRotationTuile2);
 
-
-
-
-    public void jetonShuffle(){
-        Collections.shuffle(listeJetons);
-
+    public static void setPlayer(String player) {
+        Tour.player = player;
     }
-    public List <Jeton> listeJeton(){
-        return listeJetons;
+
+    public static String getPlayer() {
+        return player;
     }
-    public abstract void jouerTour();
+
+
+
 
 
 
