@@ -74,7 +74,7 @@ public enum PlateauJeu {
     int choice2;
     int choice3;
     int choice4;
-    int tourCount = 1;
+    int tourCount=1;
 
     PlateauJeu() {
 
@@ -96,9 +96,10 @@ public enum PlateauJeu {
 
 
 
-        while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6 && ) { // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
+        while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6) { // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
 
             if ((tourCount % 2) != 0){
+                tourCount++;
                 Tour.setPlayer("Detective");
                 System.out.println(" ");
 
@@ -219,10 +220,7 @@ public enum PlateauJeu {
                     PlayerMrJack.sablierAddFinTour();
                     for (int i = 0; i < listAlibisVisible.toArray().length; i++) {
                         AlibiName.tournerTuile(listAlibisVisible.get(i));
-
-
                     }
-
                 }
                 System.out.println(PlayerMrJack.getSablier());
                 System.out.println(PlayerMrJack.getMrJackCard());
@@ -230,9 +228,14 @@ public enum PlateauJeu {
                     System.out.println(alibiList.get(i).getPosition().getEtatTuile() + " " + alibiList.get(i));
 
                 }
-                tourCount += 1;
+
+                if (PlayerMrJack.getSablier() > 5 || tourCount >= 8){
+                    System.out.println("MrJack l'emporte");
+                    break;
+                }
             }
             else{
+                tourCount ++;
                 Tour.setPlayer("MrJack");
                 System.out.println(" ");
 
@@ -364,7 +367,11 @@ public enum PlateauJeu {
                     System.out.println(alibiList.get(i).getPosition().getEtatTuile() + " " + alibiList.get(i));
 
                 }
-                tourCount += 1;
+                if (PlayerMrJack.getSablier() > 5 || tourCount >= 8) {
+                    System.out.println("MrJack l'emporte");
+                    break;
+                }
+
                 listeJeton.add(jeton3Personnages);
                 listeJeton.add(jetonAlibi);
                 listeJeton.add(jetonDeplacerHOLMES);
@@ -374,6 +381,8 @@ public enum PlateauJeu {
                 listeJeton.add(jetonRotationTuile1);
                 listeJeton.add(jetonRotationTuile2);
                 jetonShuffle();
+
+
 
 
             }

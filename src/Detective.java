@@ -189,13 +189,13 @@ public enum Detective implements PositionableObject {
                 (Detective.WATSON.getPosition().getLigne() == 0 && Detective.WATSON.getPosition().getColonne() == 1) ||
                 (Detective.TOBY.getPosition().getLigne() == 0 && Detective.TOBY.getPosition().getColonne() == 1)) {
 
-            if (p1.getSens() == Position.Sens.NORTH || p1.getSens() == Position.Sens.EAST || p1.getSens() == Position.Sens.WEST){    // Si un des alibis à cette position (ligne 1, colonne 1)
+            if (p1.getSens() == Position.Sens.NORTH || p1.getSens() == Position.Sens.EAST || p1.getSens() == Position.Sens.WEST || p1.getSens() == Position.Sens.AUCUN){    // Si un des alibis à cette position (ligne 1, colonne 1)
                 listVisible.add(tableau[0][0]); // On ajoute cet alibi à la liste des visibles
-                if ((p1.getSens() == Position.Sens.EAST || p1.getSens() == Position.Sens.WEST) &&
-                        (p4.getSens() == Position.Sens.EAST || p4.getSens() == Position.Sens.WEST || p4.getSens() == Position.Sens.NORTH)){
+                if ((p1.getSens() == Position.Sens.EAST || p1.getSens() == Position.Sens.WEST || p1.getSens() == Position.Sens.AUCUN) &&
+                        (p4.getSens() == Position.Sens.EAST || p4.getSens() == Position.Sens.WEST || p4.getSens() == Position.Sens.NORTH || p4.getSens() == Position.Sens.AUCUN)){
                     listVisible.add(tableau[1][0]);
-                    if ((p4.getSens() == Position.Sens.EAST || p4.getSens() == Position.Sens.WEST) &&
-                            (p7.getSens() == Position.Sens.EAST || p7.getSens() == Position.Sens.WEST || p7.getSens() == Position.Sens.NORTH)){
+                    if ((p4.getSens() == Position.Sens.EAST || p4.getSens() == Position.Sens.WEST || p4.getSens() == Position.Sens.AUCUN) &&
+                            (p7.getSens() == Position.Sens.EAST || p7.getSens() == Position.Sens.WEST || p7.getSens() == Position.Sens.NORTH || p4.getSens() == Position.Sens.AUCUN)){
                         listVisible.add(tableau[2][0]);
                     }
                 }
