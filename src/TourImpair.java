@@ -1,3 +1,4 @@
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -46,11 +47,13 @@ public class TourImpair extends Tour{
 
         }
         listeJeton().get(choice1).action();
+        System.out.print("CHOIX : ");
         listeJeton().get(choice1).getName();
-        listeJeton().remove(2);
 
 
-        /*
+
+
+
 
         System.out.println("MrJack, c'est à votre tour de jouer 2 jetons");
         System.out.println("Jetons disponible: ");
@@ -64,7 +67,7 @@ public class TourImpair extends Tour{
             //System.out.println("tapez le nombre");
             //int choice1 = scanner.nextInt();
             choice2 = 2;
-        }while(!(choice2 == 0 || choice1 == 1 || choice1 == 2));
+        }while(!(choice2 == 0 || choice2 == 1 || choice2 == 2));
 
         switch (choice2) {
             case 1:
@@ -79,8 +82,9 @@ public class TourImpair extends Tour{
         }
 
         listeJeton().get(choice2).action();
+        System.out.print("CHOIX: ");
         listeJeton().get(choice2).getName();
-        listeJeton().remove(choice2);
+
 
 
 
@@ -95,8 +99,8 @@ public class TourImpair extends Tour{
         do{
             //System.out.println("tapez le nombre");
             //int choice1 = scanner.nextInt();
-            choice3 = 3;
-        }while(!(choice3 == 1 || choice3 == 2));
+            choice3 = 1;
+        }while(!(choice3 == 0 || choice3 == 1));
         switch (choice3) {
             case 1:
                 listeJeton().get(0);
@@ -107,7 +111,6 @@ public class TourImpair extends Tour{
         }
         listeJeton().get(choice3).action();
         listeJeton().get(choice3).getName();
-        listeJeton().remove(choice3);
 
 
 
@@ -119,8 +122,8 @@ public class TourImpair extends Tour{
         do{
             //System.out.println("tapez le nombre");
             //int choice1 = scanner.nextInt();
-            choice4 = 3;
-        }while(choice4 != 1);
+            choice4 = 0;
+        }while(choice4 != 0);
 
         switch (choice4) {
             case 1:
@@ -129,9 +132,7 @@ public class TourImpair extends Tour{
         }
         listeJeton().get(choice4).action();
         listeJeton().get(choice4).getName();
-        listeJeton().remove(choice4);
 
-         */
 
 
 

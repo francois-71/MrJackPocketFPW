@@ -62,45 +62,192 @@ public enum PlateauJeu {
 
     public PlateauMrJack currentBoard;
 
+    Jeton jeton3Personnages = new Jeton3Personnages();
+    Jeton jetonAlibi = new JetonAlibi();
+    Jeton jetonDeplacerHOLMES = new JetonDeplacerHOLMES();
+    Jeton jetonDeplacerTOBY = new JetonDeplacerTOBY();
+    Jeton jetonDeplacerWATSON = new JetonDeplacerWATSON();
+    Jeton jetonEchangeTuile = new JetonEchangeTuile();
+    Jeton jetonRotationTuile1 = new JetonRotationTuile();
+    Jeton jetonRotationTuile2 = new JetonRotationTuile();
+
+    List<Jeton> listeJeton = new ArrayList<>();
+
+    int choice1;
+    int choice2;
+    int choice3;
+    int choice4;
 
 
     int tourCount;
 
     PlateauJeu() {
 
+
         AlibiName.placerAlibi(); // place les alibis dans un ordre aléatoire
         Detective.placerDetective(); // place les detectives
         PlayerMrJack.setMrJackCard();
         updateBoard();
         printBoard();
-        Tour a = new TourImpair();
-        a.jouerTour();
+        listeJeton.add(jeton3Personnages);
+        listeJeton.add(jetonAlibi);
+        listeJeton.add(jetonDeplacerHOLMES);
+        listeJeton.add(jetonDeplacerTOBY);
+        listeJeton.add(jetonDeplacerWATSON);
+        listeJeton.add(jetonEchangeTuile);
+        listeJeton.add(jetonRotationTuile1);
+        listeJeton.add(jetonRotationTuile2);
+        jetonShuffle();
 
+
+
+            System.out.println("Detective, c'est à vous");
+            System.out.println("Jetons disponible: ");
+            System.out.print("0: ");
+            listeJeton().get(0).getName();
+            System.out.print("1: ");
+            listeJeton().get(1).getName();
+            System.out.print("2: ");
+            listeJeton().get(2).getName();
+            System.out.print("3: ");
+            listeJeton().get(3).getName();
+
+            do {
+                //System.out.println("tapez le nombre");
+                //int choice1 = scanner.nextInt();
+                choice1 = 0;
+            } while (!(choice1 == 0 || choice1 == 1 || choice1 == 2 || choice1 == 3));
+
+            switch (choice1) {
+                case 1:
+                    listeJeton().get(0);
+                    break;
+                case 2:
+                    listeJeton().get(1);
+                    break;
+                case 3:
+                    listeJeton().get(2);
+                    break;
+                case 4:
+                    listeJeton().get(3);
+                    break;
+
+            }
+            listeJeton().get(choice1).action();
+            System.out.print("CHOIX : ");
+            listeJeton().get(choice1).getName();
+            listeJeton().remove(choice1);
+            System.out.println(" ");
+            updateBoard();
+            printBoard();
+
+
+            System.out.println("MrJack, c'est à votre tour de jouer 2 jetons");
+            System.out.println("Jetons disponible: ");
+            System.out.print("0: ");
+            listeJeton().get(0).getName();
+            System.out.print("1: ");
+            listeJeton().get(1).getName();
+            System.out.print("2: ");
+            listeJeton().get(2).getName();
+            do {
+                //System.out.println("tapez le nombre");
+                //int choice1 = scanner.nextInt();
+                choice2 = 2;
+            } while (!(choice2 == 0 || choice2 == 1 || choice2 == 2));
+
+            switch (choice2) {
+                case 1:
+                    listeJeton().get(0);
+                    break;
+                case 2:
+                    listeJeton().get(1);
+                    break;
+                case 3:
+                    listeJeton().get(2);
+                    break;
+            }
+
+            listeJeton().get(choice2).action();
+            System.out.print("CHOIX: ");
+            listeJeton().get(choice2).getName();
+            listeJeton().remove(choice2);
+
+            System.out.println(" ");
+            updateBoard();
+            printBoard();
+
+
+            System.out.println("MrJack, choisissez votre 2ème jeton");
+            System.out.println("Jetons disponible: ");
+            System.out.print("0: ");
+            listeJeton().get(0).getName();
+            System.out.print("1: ");
+            listeJeton().get(1).getName();
+            do {
+                //System.out.println("tapez le nombre");
+                //int choice1 = scanner.nextInt();
+                choice3 = 1;
+            } while (!(choice3 == 0 || choice3 == 1));
+            switch (choice3) {
+                case 1:
+                    listeJeton().get(0);
+                    break;
+                case 2:
+                    listeJeton().get(1);
+                    break;
+            }
+            listeJeton().get(choice3).action();
+            System.out.print("CHOIX: ");
+            listeJeton().get(choice3).getName();
+            listeJeton().remove(choice3);
+            System.out.println(" ");
+            updateBoard();
+            printBoard();
+
+
+            System.out.println("Detective, jouez le dernier jeton");
+            System.out.println("Jetons disponible: ");
+            System.out.print("0: ");
+            listeJeton().get(0).getName();
+
+            do {
+                //System.out.println("tapez le nombre");
+                //int choice1 = scanner.nextInt();
+                choice4 = 0;
+            } while (choice4 != 0);
+
+            switch (choice4) {
+                case 1:
+                    listeJeton().get(0);
+                    break;
+            }
+            listeJeton().get(choice4).action();
+            System.out.print("CHOIX: ");
+            listeJeton().get(choice4).getName();
+            listeJeton().remove(choice4);
+            System.out.println(" ");
+            updateBoard();
+            printBoard();
+        System.out.println(" ");
+        System.out.println(Detective.isVisible(AlibiName.values()));
+        ArrayList listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values())); //Conversion du HashSet en ArrayList pour avoir accès à l'index de la liste d'alibis visibles.
+        for (int i = 0; i < listAlibisVisible.toArray().length; i++) {
+            listAlibisVisible.get(1).
+
+        }
 
         /*
 
-
-
         while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6){ // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
 
-            if (tourCount % 2 != 0){
-                Tour action = new TourImpair();
-                action.jouerTour
 
-
-
-                // Detective qui commence
-            }
-            else {
-                Tour action = new TourPair();
-               // MrJack qui commence
-
-            }
         }
 
          */
-        updateBoard();
-        printBoard();
+
+
+
 
 
 
@@ -122,9 +269,15 @@ public enum PlateauJeu {
             }
         }
     }
-    public void askMove(){
+
+    public void jetonShuffle(){
+        Collections.shuffle(listeJeton);
 
     }
+    public List <Jeton> listeJeton() {
+        return listeJeton;
+    }
+
 }
 
 

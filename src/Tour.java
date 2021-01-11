@@ -5,6 +5,7 @@ import java.util.List;
 public abstract class Tour {
 
 
+
     Jeton jeton3Personnages = new Jeton3Personnages();
     Jeton jetonAlibi = new JetonAlibi();
     Jeton jetonDeplacerHOLMES = new JetonDeplacerHOLMES();
@@ -17,6 +18,7 @@ public abstract class Tour {
     List<Jeton> listeJetons = Arrays.asList(jeton3Personnages, jetonAlibi, jetonDeplacerHOLMES,
             jetonDeplacerTOBY, jetonDeplacerWATSON, jetonEchangeTuile, jetonRotationTuile1,
             jetonRotationTuile2);
+
 
 
 
