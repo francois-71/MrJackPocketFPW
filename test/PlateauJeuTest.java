@@ -11,7 +11,7 @@ class PlateauJeuTest {
     void PlateauJeu() {
 
 
-        PlateauJeu monJeu = PlateauJeu.PLATEAU;
+        //PlateauJeu monJeu = PlateauJeu.PLATEAU;
 
 
 

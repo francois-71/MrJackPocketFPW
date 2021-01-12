@@ -93,6 +93,7 @@ public enum PlateauJeu {
         listeJeton.add(jetonRotationTuile1);
         listeJeton.add(jetonRotationTuile2);
         jetonShuffle();
+        HashSet <AlibiName> listAlibisReturned = new HashSet<>();
 
 
 
@@ -208,20 +209,25 @@ public enum PlateauJeu {
                 List<AlibiName> alibiList = Arrays.asList(AlibiName.values());
 
 
-                if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) {
+                if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard()) && listAlibisReturned.size() != 8) {
                     System.out.println("MrJack fait partie des Alibis visible");
                     for (int i = 0; i < AlibiName.values().length; i++) {
                         if (!listAlibisVisible.contains(alibiList.get(i))) {
                             AlibiName.tournerTuile(alibiList.get(i));
+                            listAlibisReturned.add(alibiList.get(i));
+
                         }
                     }
-                } else if (!(listAlibisVisible.contains(PlayerMrJack.getMrJackCard()))) {
+
+                } else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard()) && listAlibisReturned.size() != 8) {
                     System.out.println("MrJack ne fait pas partie des Alibis visible");
                     PlayerMrJack.sablierAddFinTour();
                     for (int i = 0; i < listAlibisVisible.toArray().length; i++) {
                         AlibiName.tournerTuile(listAlibisVisible.get(i));
+                        listAlibisReturned.add(listAlibisVisible.get(i));
                     }
                 }
+
                 System.out.println(PlayerMrJack.getSablier());
                 System.out.println(PlayerMrJack.getMrJackCard());
                 for (int i = 0; i < AlibiName.values().length; i++) {
@@ -229,12 +235,29 @@ public enum PlateauJeu {
 
                 }
 
-                if (PlayerMrJack.getSablier() > 5 || tourCount >= 8){
+
+
+                if (PlayerMrJack.getSablier() > 5 && listAlibisReturned.size() == 8){ // Si les deux joueurs ont remplis leur objectif au même moment
+                    if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) { //Si MrJack est la seule carte alibi visible (Seule carte car pour acceder à cette condition, les 8 autres cartes doivent déjà être retournée)
+                        System.out.println("Le detective l'emporte");
+                        break;
+                    }
+                    else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard())){ //Si MrJack n'est pas visible, mais qu'il reste que lui,
+                        System.out.println("MrJack gagne");
+                        break;
+
+                    }
+                }else if (PlayerMrJack.getSablier() > 5 || tourCount >= 8){
                     System.out.println("MrJack l'emporte");
+                    break;
+                }else if (listAlibisReturned.size() == 8){
+                    System.out.println("Le detective l'emporte");
                     break;
                 }
             }
             else{
+                updateBoard();
+                printBoard();
                 tourCount ++;
                 Tour.setPlayer("MrJack");
                 System.out.println(" ");
@@ -339,38 +362,57 @@ public enum PlateauJeu {
                 printBoard();
                 System.out.println(" ");
 
-                System.out.println(Detective.isVisible(AlibiName.values()));
+                
                 ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values())); //Conversion du HashSet en ArrayList pour avoir accès à l'index de la liste d'alibis visibles.
                 List<AlibiName> alibiList = Arrays.asList(AlibiName.values());
 
 
-                if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) {
+                if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard()) && listAlibisReturned.size() != 8) {
                     System.out.println("MrJack fait partie des Alibis visible");
                     for (int i = 0; i < AlibiName.values().length; i++) {
                         if (!listAlibisVisible.contains(alibiList.get(i))) {
                             AlibiName.tournerTuile(alibiList.get(i));
+                            listAlibisReturned.add(alibiList.get(i));
+
                         }
                     }
-                } else if (!(listAlibisVisible.contains(PlayerMrJack.getMrJackCard()))) {
+
+                } else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard()) && listAlibisReturned.size() != 8) {
                     System.out.println("MrJack ne fait pas partie des Alibis visible");
                     PlayerMrJack.sablierAddFinTour();
                     for (int i = 0; i < listAlibisVisible.toArray().length; i++) {
                         AlibiName.tournerTuile(listAlibisVisible.get(i));
-
-
+                        listAlibisReturned.add(listAlibisVisible.get(i));
                     }
-
                 }
+
                 System.out.println(PlayerMrJack.getSablier());
                 System.out.println(PlayerMrJack.getMrJackCard());
                 for (int i = 0; i < AlibiName.values().length; i++) {
                     System.out.println(alibiList.get(i).getPosition().getEtatTuile() + " " + alibiList.get(i));
 
                 }
-                if (PlayerMrJack.getSablier() > 5 || tourCount >= 8) {
+
+
+
+                if (PlayerMrJack.getSablier() > 5 && listAlibisReturned.size() == 8){ // Si les deux joueurs ont remplis leur objectif au même moment
+                    if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) { //Si MrJack est la seule carte alibi visible (Seule carte car pour acceder à cette condition, les 8 autres cartes doivent déjà être retournée)
+                        System.out.println("Le detective l'emporte");
+                        break;
+                    }
+                    else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard())){ //Si MrJack n'est pas visible, mais qu'il reste que lui,
+                        System.out.println("MrJack gagne");
+                        break;
+
+                    }
+                }else if (PlayerMrJack.getSablier() > 5 || tourCount >= 8){
                     System.out.println("MrJack l'emporte");
                     break;
+                }else if (listAlibisReturned.size() == 8){
+                    System.out.println("Le detective l'emporte");
+                    break;
                 }
+
 
                 listeJeton.add(jeton3Personnages);
                 listeJeton.add(jetonAlibi);
@@ -387,7 +429,9 @@ public enum PlateauJeu {
 
             }
 
+
         }
+        System.out.println(listAlibisReturned);
     }
 
     public void updateBoard() {
