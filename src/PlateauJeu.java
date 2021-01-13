@@ -98,8 +98,10 @@ public enum PlateauJeu {
 
 
         while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6) { // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
+            Scanner scanner = new Scanner(System.in);
 
             if ((tourCount % 2) != 0){
+
                 tourCount++;
                 Tour.setPlayer("Detective");
                 System.out.println(" ");
@@ -135,6 +137,8 @@ public enum PlateauJeu {
                 System.out.println(" ");
 
                 System.out.println("MrJack, c'est à votre tour de jouer 2 jetons");
+                System.out.println("Ecrivez un mot pour continuer");
+                String word2 = scanner.nextLine();
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -228,10 +232,8 @@ public enum PlateauJeu {
                     }
                 }
 
-                System.out.println(PlayerMrJack.getSablier());
-                System.out.println(PlayerMrJack.getMrJackCard());
                 for (int i = 0; i < AlibiName.values().length; i++) {
-                    System.out.println(alibiList.get(i).getPosition().getEtatTuile() + " " + alibiList.get(i));
+                    System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
 
                 }
 
@@ -263,6 +265,8 @@ public enum PlateauJeu {
                 System.out.println(" ");
 
                 System.out.println("MrJack, c'est à vous");
+                System.out.println("Ecrivez un mot pour continuer");
+                String word = scanner.nextLine();
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -342,6 +346,8 @@ public enum PlateauJeu {
 
                 System.out.println(" ");
                 System.out.println("MrJack, jouez le dernier jeton");
+                System.out.println("Ecrivez un mot pour continuer");
+                String word3 = scanner.nextLine();
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -362,7 +368,7 @@ public enum PlateauJeu {
                 printBoard();
                 System.out.println(" ");
 
-                
+
                 ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values())); //Conversion du HashSet en ArrayList pour avoir accès à l'index de la liste d'alibis visibles.
                 List<AlibiName> alibiList = Arrays.asList(AlibiName.values());
 
@@ -386,10 +392,10 @@ public enum PlateauJeu {
                     }
                 }
 
-                System.out.println(PlayerMrJack.getSablier());
-                System.out.println(PlayerMrJack.getMrJackCard());
+
+
                 for (int i = 0; i < AlibiName.values().length; i++) {
-                    System.out.println(alibiList.get(i).getPosition().getEtatTuile() + " " + alibiList.get(i));
+                    System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
 
                 }
 

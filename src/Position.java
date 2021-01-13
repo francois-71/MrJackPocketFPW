@@ -13,6 +13,13 @@ public class Position {
 
     private Returned etatTuile;
 
+    public enum Sens {
+        NORTH, SOUTH, EAST, WEST, AUCUN;
+    }
+    public enum Returned{
+        INGAME, RETURNED, NONE;
+    }
+
     public Position(int ligne, int colonne, Sens sens, Returned etatTuile) {
         this.ligne = ligne;
         this.colonne = colonne;
@@ -53,17 +60,5 @@ public class Position {
         this.etatTuile = etatTuile;
     }
 
-    public boolean equals(Position position) {
-        return position.getColonne() == this.getColonne()
-                && position.ligne == this.ligne
-                && position.sens == this.sens;
 
-    }
-
-    public enum Sens {
-        NORTH, SOUTH, EAST, WEST, AUCUN;
-    }
-    public enum Returned{
-        INGAME, RETURNED, NONE;
-    }
 }
