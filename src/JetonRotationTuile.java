@@ -1,31 +1,29 @@
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class JetonRotationTuile extends Jeton{
 
     String nomTuile;
     String sensTuile;
+    Scanner scanner = new Scanner(System.in);
 
     @Override
     public void action() {
-        //Scanner scanner = new Scanner(System.in); //TODO SCANNER A REACTIVE (DESACTIVE POUR JUNIT);
         List<AlibiName> listAlibis = Arrays.asList(AlibiName.values());
         List<Position.Sens> listSens = Arrays.asList(Position.Sens.values());
 
         do {
-            //System.out.println("saisir le nom de la tuile à déplacer");
-            nomTuile = "BERT";
-        } while(!listAlibis.toString().contains(nomTuile));
+            System.out.println("saisir le nom de la tuile à tourner");
+            nomTuile = scanner.nextLine().toUpperCase();
+        } while(!listAlibis.toString().toUpperCase().contains(nomTuile));
 
-        //System.out.println("Le sens initial de " + nomTuile + " est " + AlibiName.BERT.getPosition().getSens());
 
         do {
-            //System.out.println("Tapez le sens (NORTH, SOUTH, EAST ou WEST)");
-            sensTuile = "SOUTH";
+            System.out.println("Tapez le sens (NORTH, SOUTH, EAST ou WEST)");
+            sensTuile = scanner.nextLine().toUpperCase();
 
-        } while(!listSens.toString().contains(sensTuile));
+        } while(!listSens.toString().toUpperCase().contains(sensTuile));
 
         AlibiName.rotationTuile(AlibiName.valueOf(nomTuile), Position.Sens.valueOf(sensTuile));
 

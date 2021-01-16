@@ -6,6 +6,7 @@ public class Jeton3Personnages extends Jeton{
 
     String detective;
     String deplacement;
+    Scanner scanner = new Scanner(System.in);
 
     @Override
     public void action() {
@@ -16,22 +17,23 @@ public class Jeton3Personnages extends Jeton{
 
         do {
             System.out.println("Choisir le detective à déplacer: TOBY, HOLMES ou WATSON"); // Rajouter le choix des personnages
-            //String detective = scanner.nextLine();
-            detective = "TOBY";
-        }while(!listDetective.toString().contains(detective));
+            detective = scanner.nextLine().toUpperCase();
+
+        }while(!listDetective.toString().toUpperCase().contains(detective));
 
         System.out.println("Vous avez choisi de déplacer " + detective);
 
         do {
             System.out.println("De combien de case souhaitez vous déplacer " + detective + " ? Saisir '0' pour qu'il ne bouge pas, '1' pour le faire avancer d'une case Sens horaire");
-            //String  deplacement = scanner.nextLine();
-            deplacement = "1";
+            deplacement = scanner.nextLine();
 
 
         }while(!Arrays.toString(deplacementPossible).contains(deplacement)); // Condition est tjs vraie OU fausse car on fixe un int, qui ne devra plus être fixé quand on utilisera le scanner
 
         System.out.println("le deplacement est " + deplacement);
-    Detective.move1of3Characters(Detective.valueOf(detective), Integer.parseInt(deplacement));
+        if (deplacement.equals("1")) {
+            Detective.move1of3Characters(Detective.valueOf(detective), Integer.parseInt(deplacement));
+        }
     }
 
     @Override
