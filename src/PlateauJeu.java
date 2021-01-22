@@ -19,18 +19,6 @@ public enum PlateauJeu {
                 tableau2[p.getLigne()][p.getColonne()] = detective;
             }
         }
-
-        public AlibiName getAlibi(int x, int y) { // Méthode qui retourne la position des alibis
-            return tableau[x][y];
-
-        }
-
-        public AlibiName[][] getTableau() {
-            return tableau.clone();
-            //List<Detective> detectives
-        }
-
-
         public Set<PositionableObject>[][] getExtendedBoard() {
             HashSet<PositionableObject>[][] board = new HashSet[5][5];
 
@@ -79,8 +67,6 @@ public enum PlateauJeu {
         AlibiName.placerAlibi(); // place les alibis dans un ordre aléatoire
         Detective.placerDetective(); // place les detectives
         PlayerMrJack.setMrJackCard(); // Etablit l'identité de MrJack.
-        updateBoard();
-        printBoard();
         listeJeton.add(jeton3Personnages);
         listeJeton.add(jetonAlibi);
         listeJeton.add(jetonDeplacerHOLMES);
@@ -101,6 +87,8 @@ public enum PlateauJeu {
         while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6) { // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
 
             if ((tourCount % 2) != 0){
+                updateBoard();
+                printBoard();
                 System.out.println(" ");
                 for (int i = 0; i < AlibiName.values().length; i++) {
                     System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
@@ -124,7 +112,6 @@ public enum PlateauJeu {
                     System.out.println("Tapez le nombre");
                     choice = scanner.nextInt();
                 } while (!(choice == 0 || choice == 1 || choice == 2 || choice == 3));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
                 System.out.println(" ");
@@ -140,6 +127,8 @@ public enum PlateauJeu {
                 System.out.println("MrJack, c'est à votre tour de jouer 2 jetons");
                 System.out.println("Ecrivez quelque chose pour continuer");
                 protection.nextLine();
+                System.out.println("Votre identité est : " + PlayerMrJack.getMrJackCard());
+                System.out.println("");
                 for (int i = 0; i < AlibiName.values().length; i++) {
                     System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
                 }
@@ -157,7 +146,6 @@ public enum PlateauJeu {
                     System.out.println("Tapez le nombre");
                     choice = scanner.nextInt();
                 } while (!(choice == 0 || choice == 1 || choice == 2));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
 
@@ -173,6 +161,8 @@ public enum PlateauJeu {
                 System.out.println("Tour : " + tourCount);
                 System.out.println("");
                 System.out.println("MrJack, choisissez votre 2ème jeton");
+                System.out.println("Votre identité est : " + PlayerMrJack.getMrJackCard());
+                System.out.println("");
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -183,7 +173,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (!(choice == 0 || choice == 1));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
                 System.out.println(" ");
@@ -208,7 +197,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (choice != 0);
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
                 System.out.println(" ");
@@ -287,6 +275,8 @@ public enum PlateauJeu {
                 System.out.println("MrJack, c'est à vous");
                 System.out.println("Ecrivez quelque chose pour continuer");
                 protection.nextLine();
+                System.out.println("Votre identité est : " + PlayerMrJack.getMrJackCard());
+                System.out.println("");
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -301,7 +291,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (!(choice == 0 || choice == 1 || choice == 2 || choice == 3));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
                 System.out.println(" ");
@@ -332,7 +321,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (!(choice == 0 || choice == 1 || choice == 2));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
 
@@ -357,7 +345,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (!(choice == 0 || choice == 1));
-                System.out.print("CHOIX : ");
                 listeJeton().get(choice).action();
                 listeJeton().remove(choice);
                 System.out.println(" ");
@@ -376,6 +363,8 @@ public enum PlateauJeu {
                 System.out.println("MrJack, jouez le dernier jeton");
                 System.out.println("Ecrivez un mot pour continuer");
                 protection.nextLine();
+                System.out.println("Votre identité est : " + PlayerMrJack.getMrJackCard());
+                System.out.println("");
                 System.out.println("Jetons disponible: ");
                 System.out.print("0: ");
                 listeJeton().get(0).getName();
@@ -385,7 +374,6 @@ public enum PlateauJeu {
                     choice = scanner.nextInt();
 
                 } while (choice != 0);
-                System.out.print("CHOIX : ");
 
 
                 listeJeton().get(choice).action();
@@ -424,14 +412,6 @@ public enum PlateauJeu {
                         listAlibisReturned.add(listAlibisVisible.get(i));
                     }
                 }
-
-
-
-                for (int i = 0; i < AlibiName.values().length; i++) {
-                    System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
-                }
-
-
 
                 if (PlayerMrJack.getSablier() > 5 && listAlibisReturned.size() == 8){ // Si les deux joueurs ont remplis leur objectif au même moment
                     if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) { //Si MrJack est la seule carte alibi visible (Seule carte car pour acceder à cette condition, les 8 autres cartes doivent déjà être retournée)
