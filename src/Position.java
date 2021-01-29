@@ -1,8 +1,3 @@
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class Position {
 
     private int ligne;

@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class PlayerMrJack extends Player{
+public class PlayerMrJack {
 
 
     private static AlibiName mrJackAlibiCard;

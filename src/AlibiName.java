@@ -51,18 +51,6 @@ public enum AlibiName implements PositionableObject{
 
     public static void rotationTuile(AlibiName p1, Position.Sens s1) {
         Position x1 = p1.getPosition();
-        //if (x1.getSens() == Position.Sens.NORTH) {
-        //    x1.setSens(Position.Sens.EAST);
-        //}
-        //else if (x1.getSens() == Position.Sens.EAST) {
-        //    x1.setSens(Position.Sens.SOUTH);
-        //}
-        //else if (x1.getSens() == Position.Sens.SOUTH) {
-        //    x1.setSens(Position.Sens.WEST);
-        //}
-        //else if (x1.getSens() == Position.Sens.WEST) {
-        //    x1.setSens(Position.Sens.NORTH);
-        //}
         x1.setSens(s1);
     }
 

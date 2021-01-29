@@ -6,15 +6,13 @@ import java.util.List;
 
 public class JetonAlibi extends Jeton{
 
-    AlibiName nomPiece;
-    String whoIsPlaying;
-
     @Override
     public void action() { // classe qui tourne la carte choisie.
         // Scanner scanner = new Scanner(System.in);
         List<AlibiName> listAlibis = Arrays.asList(AlibiName.values());
         Collections.shuffle(listAlibis);
-        whoIsPlaying = Tour.getPlayer();
+        String whoIsPlaying = Tour.getPlayer();
+        AlibiName nomPiece;
         if (listAlibis.get(1) != PlayerMrJack.getMrJackCard()) { // Permet d'empêcher le retournement de la carte Alibi de MrJack.
             nomPiece = listAlibis.get(1);
         }

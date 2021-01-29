@@ -233,13 +233,6 @@ public enum PlateauJeu {
                     }
                 }
 
-                for (int i = 0; i < AlibiName.values().length; i++) {
-                    System.out.println(alibiList.get(i) + " - " + alibiList.get(i).getPosition().getEtatTuile() + " - " + alibiList.get(i).getPosition().getSens());
-
-                }
-
-
-
                 if (PlayerMrJack.getSablier() > 5 && listAlibisReturned.size() == 8){ // Si les deux joueurs ont remplis leur objectif au même moment
                     if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard())) { //Si MrJack est la seule carte alibi visible (Seule carte car pour acceder à cette condition, les 8 autres cartes doivent déjà être retournée)
                         System.out.println("Le detective l'emporte");
