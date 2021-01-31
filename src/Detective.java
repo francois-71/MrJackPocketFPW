@@ -29,7 +29,7 @@ public enum Detective implements PositionableObject {
         return image;
     }
 
-    public static Detective[] placerDetective() {
+    public static Detective[] placerDetective() { // méthode qui place les detective en début de jeu
         Detective.HOLMES.setPosition(new Position(1, 0, Position.Sens.AUCUN, Position.Returned.NONE)); //On ne tient pas compte des Sens
         Detective.WATSON.setPosition(new Position(1, 4, Position.Sens.AUCUN, Position.Returned.NONE)); //On ne tient pas compte des Sens
         Detective.TOBY.setPosition(new Position(4, 2, Position.Sens.AUCUN, Position.Returned.NONE)); //On ne tient pas compte des Sens
@@ -205,8 +205,8 @@ public enum Detective implements PositionableObject {
                 (Detective.WATSON.getPosition().getLigne() == 0 && Detective.WATSON.getPosition().getColonne() == 2) ||
                 (Detective.TOBY.getPosition().getLigne() == 0 && Detective.TOBY.getPosition().getColonne() == 2)){
 
-            if (!(p2.getSens() == Position.Sens.SOUTH)){    // Si un des alibis à cette position (ligne 1, colonne 1)
-                listVisible.add(tableau[0][1]); // On ajoute cet alibi à la liste des visibles
+            if (!(p2.getSens() == Position.Sens.SOUTH)){
+                listVisible.add(tableau[0][1]);
                 if ((p2.getSens() == Position.Sens.EAST || p2.getSens() == Position.Sens.WEST || p2.getSens() == Position.Sens.AUCUN) &&
                         (!(p5.getSens() == Position.Sens.SOUTH))){
                     listVisible.add(tableau[1][1]);
@@ -221,8 +221,8 @@ public enum Detective implements PositionableObject {
                 (Detective.WATSON.getPosition().getLigne() == 0 && Detective.WATSON.getPosition().getColonne() == 3) ||
                 (Detective.TOBY.getPosition().getLigne() == 0 && Detective.TOBY.getPosition().getColonne() == 3)){
 
-            if (!(p3.getSens() == Position.Sens.SOUTH)){    // Si un des alibis à cette position (ligne 1, colonne 1)
-                listVisible.add(tableau[0][2]); // On ajoute cet alibi à la liste des visibles
+            if (!(p3.getSens() == Position.Sens.SOUTH)){
+                listVisible.add(tableau[0][2]);
                 if ((p3.getSens() == Position.Sens.EAST || p3.getSens() == Position.Sens.WEST || p3.getSens() == Position.Sens.AUCUN) &&
                         (!(p6.getSens() == Position.Sens.SOUTH))){
                     listVisible.add(tableau[1][2]);

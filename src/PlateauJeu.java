@@ -10,17 +10,17 @@ public enum PlateauJeu {
         private final Detective[][] tableau2 = new Detective[5][5];
 
         public PlateauMrJack(AlibiName[] alibis, Detective[] detectives) {
-            for (AlibiName alibi : alibis) {         // Pour toutes les cellules de la liste,
-                Position p = alibi.getPosition();    // On attribue une position p
-                tableau[p.getLigne()][p.getColonne()] = alibi;
+            for (AlibiName alibi : alibis) {         // On place dans un tableau les alibis
+                Position p = alibi.getPosition();    // On attribue grâce à un passage dans la boucle une position unique p à chaque alibis
+                tableau[p.getLigne()][p.getColonne()] = alibi; // on remplit le tableau de tous les alibis
             }
-            for (Detective detective : detectives) {
+            for (Detective detective : detectives) { // Même chose qu'au dessus, mais pour les detectives cette fois.
                 Position p = detective.getPosition();
                 tableau2[p.getLigne()][p.getColonne()] = detective;
             }
         }
-        public Set<PositionableObject>[][] getExtendedBoard() {
-            HashSet<PositionableObject>[][] board = new HashSet[5][5];
+        public Set<PositionableObject>[][] getExtendedBoard() { // Plus haut, nous avons crée 2 tableau, de types différents (AlibiName et Detective)
+            HashSet<PositionableObject>[][] board = new HashSet[5][5]; // On utilise une interface pour faire un tableau de ce type, afin de regrouper AlibiName et Detective dans un même board
 
 
             for (int i = 0; i < 5; i++) {
@@ -30,7 +30,7 @@ public enum PlateauJeu {
             }
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
-                    board[i + 1][j + 1].add(this.tableau[i][j]); // Initialise le tableau avec les emplacements des alibis
+                    board[i + 1][j + 1].add(this.tableau[i][j]); // Initialise le tableau avec les emplacements des alibis (on décale de i+1, j+1 par rapport à leur position dans "tableau" plus haut).
                 }
             }
             for (int i = 0; i < 5; i++) {
@@ -49,7 +49,7 @@ public enum PlateauJeu {
     }
 
     public PlateauMrJack currentBoard;
-    Jeton jeton3Personnages = new Jeton3Personnages();
+    Jeton jeton3Personnages = new Jeton3Personnages(); // création des jetons jusqu'à la ligne 59.
     Jeton jetonAlibi = new JetonAlibi();
     Jeton jetonDeplacerHOLMES = new JetonDeplacerHOLMES();
     Jeton jetonDeplacerTOBY = new JetonDeplacerTOBY();
@@ -84,7 +84,7 @@ public enum PlateauJeu {
 
 
 
-        while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6) { // Rajouter condition (que la carte piochée par MrJack ne soit pas la seule visible par les detectives);
+        while (tourCount <= 8 && PlayerMrJack.getSablier() <= 6) {
 
             if ((tourCount % 2) != 0){
                 updateBoard();
@@ -209,7 +209,7 @@ public enum PlateauJeu {
 
 
                 System.out.println(Detective.isVisible(AlibiName.values()));
-                ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values())); //Conversion du HashSet en ArrayList pour avoir accès à l'index de la liste d'alibis visibles.
+                ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values()));
 
 
                 if (listAlibisVisible.contains(PlayerMrJack.getMrJackCard()) && listAlibisReturned.size() != 8) {
@@ -238,7 +238,7 @@ public enum PlateauJeu {
                         System.out.println("Le detective l'emporte");
                         break;
                     }
-                    else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard())){ //Si MrJack n'est pas visible, mais qu'il reste que lui,
+                    else if (!listAlibisVisible.contains(PlayerMrJack.getMrJackCard())){ //Si MrJack n'est pas visible, mais qu'il reste que lui
                         System.out.println("MrJack gagne");
                         break;
 
@@ -381,7 +381,7 @@ public enum PlateauJeu {
                 System.out.println(" ");
 
 
-                ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values())); //Conversion du HashSet en ArrayList pour avoir accès à l'index de la liste d'alibis visibles.
+                ArrayList<AlibiName> listAlibisVisible = new ArrayList(Detective.isVisible(AlibiName.values()));
 
 
 

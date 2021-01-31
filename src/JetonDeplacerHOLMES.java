@@ -19,7 +19,7 @@ public class JetonDeplacerHOLMES extends Jeton{
 
 
 
-        }while(!Arrays.toString(deplacementPossible).toUpperCase().contains(deplacement)); // Condition est tjs vraie OU fausse car on fixe un int, qui ne devra plus être fixé quand on utilisera le scanner
+        }while(!Arrays.toString(deplacementPossible).toUpperCase().contains(deplacement));
 
         System.out.println("le deplacement est " + deplacement +" case(s) (Sens horaire).");
 

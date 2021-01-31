@@ -17,7 +17,7 @@ public class JetonDeplacerTOBY extends Jeton{
             deplacement = scanner.nextLine().toUpperCase();
 
 
-        }while(!Arrays.toString(deplacementPossible).toUpperCase().contains(deplacement)); // Condition est tjs vraie OU fausse car on fixe un int, qui ne devra plus être fixé quand on utilisera le scanner
+        }while(!Arrays.toString(deplacementPossible).toUpperCase().contains(deplacement));
 
         System.out.println("le deplacement est " + deplacement +" case(s) (Sens horaire).");
 

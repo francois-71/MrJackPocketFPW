@@ -39,17 +39,17 @@ public enum AlibiName implements PositionableObject{
         p1.setPosition(x2);
     }
 
-    public static void tournerTuile(AlibiName p1) {
+    public static void tournerTuile(AlibiName p1) { // méthode pour retourner une tuile
         Position x1 = p1.getPosition();
         x1.setEtatTuile(Position.Returned.RETURNED);
         if (p1 == AlibiName.LANE) {
-            x1.setSens(Position.Sens.AUCUN);
+            x1.setSens(Position.Sens.AUCUN); // si LANE est retourné, cette carte ne possède plus de sens en particulier
         }
 
 
     }
 
-    public static void rotationTuile(AlibiName p1, Position.Sens s1) {
+    public static void rotationTuile(AlibiName p1, Position.Sens s1) { // méthode qui modifie l'orientation de la tuile
         Position x1 = p1.getPosition();
         x1.setSens(s1);
     }
@@ -73,7 +73,7 @@ public enum AlibiName implements PositionableObject{
         return this.position.get();
     }
 
-    public static AlibiName[] placerAlibi(){
+    public static AlibiName[] placerAlibi(){ // Méthode qui place les alibis en début de jeu.
         List<AlibiName> listeAlibi = Arrays.asList(values());
         Collections.shuffle(listeAlibi);
         ArrayDeque<AlibiName> deck = new ArrayDeque(listeAlibi);
