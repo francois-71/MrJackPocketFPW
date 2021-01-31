@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1258.9691852463538" y="357.0">Autres.TableauTuiles</node>
+    <node x="1911.5464285714286" y="3853.0">jetons.JetonDetective</node>
+    <node x="800.8733519130203" y="1868.0">InterfaceGraphique.Main</node>
+    <node x="906.7421724470125" y="3508.0">jetons.Jetons</node>
+    <node x="47.0" y="3875.0">jetons.JetonEchanger</node>
+    <node x="1121.5464285714286" y="3864.0">jetons.JetonWatson</node>
+    <node x="837.0" y="4234.0">tour.TourImpairs</node>
+    <node x="1647.5464285714286" y="3864.0">jetons.JetonToby</node>
+    <node x="976.1464285714287" y="862.0">Autres.Jeu</node>
+    <node x="1384.5464285714286" y="3853.0">jetons.JetonTourner</node>
+    <node x="573.0" y="3853.0">jetons.JetonTourner2</node>
+    <node x="1221.5608519130203" y="2985.0">Autres.District</node>
+    <node x="310.0" y="3864.0">jetons.JetonSherlock</node>
+    <node x="1120.679761904762" y="0.0">Autres.Detectives</node>
+    <node x="771.6535955133498" y="4651.0">tour.TourPairs</node>
+    <node x="867.3733519130203" y="1417.0">jetons.JetonAlibi</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tour.TourImpairs" target="jetons.JetonEchanger">
+      <point x="-49.25" y="-178.5" />
+      <point x="886.25" y="4184.0" />
+      <point x="168.5" y="4184.0" />
+      <point x="0.0" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonSherlock" target="Autres.District">
+      <point x="48.60000000000002" y="-134.5" />
+      <point x="480.1" y="3743.0" />
+      <point x="409.61859000825825" y="3743.0" />
+      <point x="409.61859000825825" y="3468.0" />
+      <point x="1261.6858519130203" y="3468.0" />
+      <point x="-66.875" y="211.5" />
+    </edge>
+    <edge source="tour.TourPairs" target="tour.TourImpairs">
+      <point x="0.0" y="-68.5" />
+      <point x="856.1535955133498" y="4611.0" />
+      <point x="935.5" y="4611.0" />
+      <point x="0.0" y="178.5" />
+    </edge>
+    <edge source="jetons.JetonDetective" target="Autres.Jeu">
+      <point x="48.59999999999991" y="-145.5" />
+      <point x="2081.6464285714283" y="3833.0" />
+      <point x="2079.3464285714285" y="3833.0" />
+      <point x="2079.3464285714285" y="1307.0" />
+      <point x="1200.7297619047622" y="1307.0" />
+      <point x="109.08333333333348" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonEchanger" target="Autres.District">
+      <point x="48.60000000000002" y="-123.5" />
+      <point x="217.10000000000002" y="3823.0" />
+      <point x="146.61859000825825" y="3823.0" />
+      <point x="146.61859000825825" y="3458.0" />
+      <point x="1234.9358519130203" y="3458.0" />
+      <point x="-93.625" y="211.5" />
+    </edge>
+    <edge source="Autres.TableauTuiles" target="Autres.District">
+      <point x="-38.60000000000002" y="222.5" />
+      <point x="1316.8691852463537" y="842.0" />
+      <point x="1330.6691852463537" y="842.0" />
+      <point x="1330.6691852463537" y="2945.0" />
+      <point x="1360.6608519130205" y="2945.0" />
+      <point x="32.10000000000002" y="-211.5" />
+    </edge>
+    <edge source="jetons.JetonAlibi" target="Autres.District">
+      <point x="97.19999999999993" y="200.5" />
+      <point x="1086.0733519130201" y="1848.0" />
+      <point x="1202.1464285714287" y="1848.0" />
+      <point x="1202.1464285714287" y="2945.0" />
+      <point x="1253.6608519130202" y="2945.0" />
+      <point x="-74.90000000000009" y="-211.5" />
+    </edge>
+    <edge source="InterfaceGraphique.Main" target="jetons.JetonAlibi">
+      <point x="25.25" y="-498.5" />
+      <point x="927.1233519130203" y="1848.0" />
+      <point x="940.2733519130202" y="1848.0" />
+      <point x="-48.60000000000002" y="200.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="tour.TourImpairs">
+      <point x="-109.08333333333326" y="212.5" />
+      <point x="982.5630952380955" y="1337.0" />
+      <point x="14.5" y="1337.0" />
+      <point x="14.5" y="4214.0" />
+      <point x="844.0357142857142" y="4214.0" />
+      <point x="-91.46428571428578" y="-178.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="jetons.Jetons">
+      <point x="-6.4166666666667425" y="212.5" />
+      <point x="1085.229761904762" y="1397.0" />
+      <point x="1120.8733519130203" y="1397.0" />
+      <point x="1120.8733519130203" y="3438.0" />
+      <point x="1028.2421724470125" y="3438.0" />
+      <point x="0.0" y="-102.5" />
+    </edge>
+    <edge source="tour.TourPairs" target="jetons.Jetons">
+      <point x="67.59999999999991" y="-68.5" />
+      <point x="923.7535955133498" y="4631.0" />
+      <point x="1901.0464285714286" y="4631.0" />
+      <point x="1901.0464285714286" y="3763.0" />
+      <point x="1123.7064581612983" y="3763.0" />
+      <point x="95.46428571428578" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonWatson" target="Autres.Jeu">
+      <point x="48.59999999999991" y="-134.5" />
+      <point x="1291.6464285714285" y="3823.0" />
+      <point x="1465.5608519130203" y="3823.0" />
+      <point x="1465.5608519130203" y="1337.0" />
+      <point x="1162.229761904762" y="1337.0" />
+      <point x="70.58333333333326" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonToby" target="Autres.District">
+      <point x="-48.59999999999991" y="-134.5" />
+      <point x="1720.4464285714287" y="3773.0" />
+      <point x="1645.3464285714288" y="3773.0" />
+      <point x="1645.3464285714288" y="3478.0" />
+      <point x="1395.4358519130203" y="3478.0" />
+      <point x="66.875" y="211.5" />
+    </edge>
+    <edge source="jetons.JetonAlibi" target="jetons.Jetons">
+      <point x="48.60000000000002" y="200.5" />
+      <point x="1036.7714285714287" y="3428.0" />
+      <point x="979.6421724470126" y="3428.0" />
+      <point x="-48.59999999999991" y="-102.5" />
+    </edge>
+    <edge source="jetons.JetonWatson" target="jetons.Jetons">
+      <point x="-97.20000000000005" y="-134.5" />
+      <point x="1145.8464285714285" y="3823.0" />
+      <point x="1071.6350295898696" y="3823.0" />
+      <point x="43.39285714285711" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonTourner2" target="Autres.Jeu">
+      <point x="-48.599999999999966" y="-145.5" />
+      <point x="645.9000000000001" y="3743.0" />
+      <point x="541.1185900082583" y="3743.0" />
+      <point x="541.1185900082583" y="1367.0" />
+      <point x="1021.0630952380955" y="1367.0" />
+      <point x="-70.58333333333326" y="212.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonTourner2">
+      <point x="-21.10714285714289" y="-178.5" />
+      <point x="914.3928571428571" y="4164.0" />
+      <point x="694.5" y="4164.0" />
+      <point x="0.0" y="145.5" />
+    </edge>
+    <edge source="jetons.JetonEchanger" target="jetons.Jetons">
+      <point x="97.19999999999999" y="-123.5" />
+      <point x="265.70000000000005" y="3763.0" />
+      <point x="915.4207438755839" y="3763.0" />
+      <point x="-112.82142857142867" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonToby" target="Autres.Jeu">
+      <point x="48.59999999999991" y="-134.5" />
+      <point x="1817.6464285714285" y="3823.0" />
+      <point x="1893.6464526562067" y="3823.0" />
+      <point x="1893.6464526562067" y="1317.0" />
+      <point x="1187.8964285714287" y="1317.0" />
+      <point x="96.25" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonWatson" target="Autres.District">
+      <point x="0.0" y="-134.5" />
+      <point x="1243.0464285714286" y="3813.0" />
+      <point x="1341.9358519130203" y="3813.0" />
+      <point x="13.375" y="211.5" />
+    </edge>
+    <edge source="jetons.JetonSherlock" target="Autres.Jeu">
+      <point x="-48.59999999999991" y="-134.5" />
+      <point x="382.9000000000001" y="3743.0" />
+      <point x="278.11859000825825" y="3743.0" />
+      <point x="278.11859000825825" y="1357.0" />
+      <point x="1008.229761904762" y="1357.0" />
+      <point x="-83.41666666666674" y="212.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="Autres.District">
+      <point x="19.25" y="212.5" />
+      <point x="1110.8964285714287" y="1377.0" />
+      <point x="1213.1464285714287" y="1377.0" />
+      <point x="1213.1464285714287" y="2935.0" />
+      <point x="1275.0608519130203" y="2935.0" />
+      <point x="-53.5" y="-211.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="Autres.Detectives">
+      <point x="0.0" y="-212.5" />
+      <point x="1091.6464285714287" y="842.0" />
+      <point x="1058.6464285714287" y="842.0" />
+      <point x="1058.6464285714287" y="337.0" />
+      <point x="1191.3130952380955" y="337.0" />
+      <point x="-10.866666666666674" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonTourner2" target="Autres.District">
+      <point x="48.60000000000002" y="-145.5" />
+      <point x="743.1000000000001" y="3753.0" />
+      <point x="741.7338391136793" y="3753.0" />
+      <point x="741.7338391136793" y="3478.0" />
+      <point x="1288.4358519130203" y="3478.0" />
+      <point x="-40.125" y="211.5" />
+    </edge>
+    <edge source="jetons.JetonTourner2" target="jetons.Jetons">
+      <point x="97.20000000000005" y="-145.5" />
+      <point x="791.7" y="3783.0" />
+      <point x="950.1350295898696" y="3783.0" />
+      <point x="-78.10714285714289" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonWatson" target="InterfaceGraphique.Main">
+      <point x="-48.59999999999991" y="-134.5" />
+      <point x="1194.4464285714287" y="3833.0" />
+      <point x="1197.8733519130203" y="3833.0" />
+      <point x="1197.8733519130203" y="2965.0" />
+      <point x="911.9733519130202" y="2965.0" />
+      <point x="10.099999999999909" y="498.5" />
+    </edge>
+    <edge source="jetons.JetonSherlock" target="Autres.Detectives">
+      <point x="-97.19999999999993" y="-134.5" />
+      <point x="334.30000000000007" y="3753.0" />
+      <point x="267.11859000825825" y="3753.0" />
+      <point x="267.11859000825825" y="287.0" />
+      <point x="1136.979761904762" y="287.0" />
+      <point x="-65.20000000000005" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonEchanger" target="Autres.Detectives">
+      <point x="-97.19999999999993" y="-123.5" />
+      <point x="71.30000000000007" y="3833.0" />
+      <point x="64.11859000825825" y="3833.0" />
+      <point x="64.11859000825825" y="277.0" />
+      <point x="1126.1130952380954" y="277.0" />
+      <point x="-76.0666666666666" y="123.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="InterfaceGraphique.Main">
+      <point x="-57.75" y="212.5" />
+      <point x="1033.8964285714287" y="1377.0" />
+      <point x="845.8733519130203" y="1377.0" />
+      <point x="845.8733519130203" y="1838.0" />
+      <point x="826.1233519130203" y="1838.0" />
+      <point x="-75.75" y="-498.5" />
+    </edge>
+    <edge source="jetons.JetonAlibi" target="Autres.Detectives">
+      <point x="-81.00000000000011" y="-200.5" />
+      <point x="907.8733519130201" y="1327.0" />
+      <point x="873.1464285714285" y="1327.0" />
+      <point x="873.1464285714285" y="317.0" />
+      <point x="1169.579761904762" y="317.0" />
+      <point x="-32.60000000000002" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonAlibi" target="InterfaceGraphique.Main">
+      <point x="0.0" y="200.5" />
+      <point x="988.8733519130203" y="1848.0" />
+      <point x="977.6233519130203" y="1848.0" />
+      <point x="75.75" y="-498.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonDetective">
+      <point x="91.46428571428578" y="-178.5" />
+      <point x="1026.9642857142858" y="4214.0" />
+      <point x="2033.0464285714286" y="4214.0" />
+      <point x="0.0" y="145.5" />
+    </edge>
+    <edge source="Autres.District" target="InterfaceGraphique.Main">
+      <point x="-96.30000000000007" y="-211.5" />
+      <point x="1232.2608519130204" y="2955.0" />
+      <point x="932.1733519130203" y="2955.0" />
+      <point x="30.299999999999955" y="498.5" />
+    </edge>
+    <edge source="jetons.JetonEchanger" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-123.5" />
+      <point x="168.5" y="3833.0" />
+      <point x="135.61859000825825" y="3833.0" />
+      <point x="135.61859000825825" y="2945.0" />
+      <point x="851.3733519130203" y="2945.0" />
+      <point x="-50.5" y="498.5" />
+    </edge>
+    <edge source="InterfaceGraphique.Main" target="tour.TourPairs">
+      <point x="-90.90000000000009" y="498.5" />
+      <point x="810.9733519130202" y="2925.0" />
+      <point x="3.5" y="2925.0" />
+      <point x="3.5" y="4631.0" />
+      <point x="788.5535955133499" y="4631.0" />
+      <point x="-67.59999999999991" y="-68.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="Autres.TableauTuiles">
+      <point x="77.0" y="-212.5" />
+      <point x="1168.6464285714287" y="842.0" />
+      <point x="1278.2691852463536" y="842.0" />
+      <point x="-77.20000000000005" y="222.5" />
+    </edge>
+    <edge source="jetons.JetonTourner2" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-145.5" />
+      <point x="694.5" y="3733.0" />
+      <point x="644.325" y="3733.0" />
+      <point x="644.325" y="2965.0" />
+      <point x="891.7733519130204" y="2965.0" />
+      <point x="-10.099999999999909" y="498.5" />
+    </edge>
+    <edge source="jetons.Jetons" target="Autres.District">
+      <point x="97.20000000000005" y="-102.5" />
+      <point x="1125.4421724470126" y="3488.0" />
+      <point x="1315.1858519130203" y="3488.0" />
+      <point x="-13.375" y="211.5" />
+    </edge>
+    <edge source="jetons.Jetons" target="Autres.Detectives">
+      <point x="-97.20000000000005" y="-102.5" />
+      <point x="931.0421724470125" y="3448.0" />
+      <point x="788.4400185796869" y="3448.0" />
+      <point x="788.4400185796869" y="307.0" />
+      <point x="1158.7130952380953" y="307.0" />
+      <point x="-43.4666666666667" y="123.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.Jetons">
+      <point x="35.17857142857133" y="-178.5" />
+      <point x="970.6785714285713" y="4214.0" />
+      <point x="966.0714285714287" y="4214.0" />
+      <point x="966.0714285714287" y="3833.0" />
+      <point x="1036.9207438755839" y="3833.0" />
+      <point x="8.678571428571331" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonTourner" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-145.5" />
+      <point x="1506.0464285714286" y="3813.0" />
+      <point x="1676.4983519130203" y="3813.0" />
+      <point x="1676.4983519130203" y="2905.0" />
+      <point x="952.3733519130203" y="2905.0" />
+      <point x="50.5" y="498.5" />
+    </edge>
+    <edge source="jetons.JetonDetective" target="Autres.Detectives">
+      <point x="97.19999999999982" y="-145.5" />
+      <point x="2130.2464285714286" y="3833.0" />
+      <point x="2090.3464285714285" y="3833.0" />
+      <point x="2090.3464285714285" y="267.0" />
+      <point x="1278.2464285714286" y="267.0" />
+      <point x="76.0666666666666" y="123.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonWatson">
+      <point x="49.25" y="-178.5" />
+      <point x="984.75" y="4184.0" />
+      <point x="1243.0464285714286" y="4184.0" />
+      <point x="0.0" y="134.5" />
+    </edge>
+    <edge source="Autres.Jeu" target="jetons.JetonAlibi">
+      <point x="-19.25" y="212.5" />
+      <point x="1072.3964285714287" y="1397.0" />
+      <point x="1069.87335191302" y="1397.0" />
+      <point x="80.99999999999989" y="-200.5" />
+    </edge>
+    <edge source="InterfaceGraphique.Main" target="tour.TourImpairs">
+      <point x="-70.70000000000005" y="498.5" />
+      <point x="831.1733519130203" y="2935.0" />
+      <point x="36.5" y="2935.0" />
+      <point x="36.5" y="4194.0" />
+      <point x="872.1785714285713" y="4194.0" />
+      <point x="-63.32142857142867" y="-178.5" />
+    </edge>
+    <edge source="jetons.JetonToby" target="Autres.Detectives">
+      <point x="97.20000000000005" y="-134.5" />
+      <point x="1866.2464285714286" y="3833.0" />
+      <point x="1904.6464526562067" y="3833.0" />
+      <point x="1904.6464526562067" y="277.0" />
+      <point x="1267.379761904762" y="277.0" />
+      <point x="65.20000000000005" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonTourner" target="Autres.Detectives">
+      <point x="97.19999999999999" y="-145.5" />
+      <point x="1603.2464285714286" y="3833.0" />
+      <point x="1698.4983519130203" y="3833.0" />
+      <point x="1698.4983519130203" y="287.0" />
+      <point x="1256.5130952380953" y="287.0" />
+      <point x="54.33333333333326" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonTourner" target="Autres.District">
+      <point x="-48.59999999999991" y="-145.5" />
+      <point x="1457.4464285714287" y="3793.0" />
+      <point x="1413.4983519130203" y="3793.0" />
+      <point x="1413.4983519130203" y="3488.0" />
+      <point x="1368.6858519130203" y="3488.0" />
+      <point x="40.125" y="211.5" />
+    </edge>
+    <edge source="jetons.JetonDetective" target="jetons.Jetons">
+      <point x="-97.20000000000005" y="-145.5" />
+      <point x="1935.8464285714285" y="3753.0" />
+      <point x="1141.0636010184412" y="3753.0" />
+      <point x="112.82142857142867" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonTourner" target="jetons.Jetons">
+      <point x="-97.20000000000005" y="-145.5" />
+      <point x="1408.8464285714285" y="3803.0" />
+      <point x="1088.9921724470125" y="3803.0" />
+      <point x="60.75" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonWatson" target="Autres.Detectives">
+      <point x="97.20000000000005" y="-134.5" />
+      <point x="1340.2464285714286" y="3833.0" />
+      <point x="1490.7608519130204" y="3833.0" />
+      <point x="1490.7608519130204" y="297.0" />
+      <point x="1245.6464285714287" y="297.0" />
+      <point x="43.4666666666667" y="123.5" />
+    </edge>
+    <edge source="InterfaceGraphique.Main" target="Autres.Jeu">
+      <point x="-25.25" y="-498.5" />
+      <point x="876.6233519130203" y="1838.0" />
+      <point x="856.8733519130203" y="1838.0" />
+      <point x="856.8733519130203" y="1387.0" />
+      <point x="1046.729761904762" y="1387.0" />
+      <point x="-44.91666666666674" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonTourner2" target="Autres.Detectives">
+      <point x="-97.19999999999993" y="-145.5" />
+      <point x="597.3000000000002" y="3753.0" />
+      <point x="530.1185900082583" y="3753.0" />
+      <point x="530.1185900082583" y="297.0" />
+      <point x="1147.8464285714288" y="297.0" />
+      <point x="-54.33333333333337" y="123.5" />
+    </edge>
+    <edge source="jetons.JetonToby" target="jetons.Jetons">
+      <point x="-97.19999999999993" y="-134.5" />
+      <point x="1671.8464285714285" y="3783.0" />
+      <point x="1106.3493153041554" y="3783.0" />
+      <point x="78.10714285714289" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonEchanger" target="Autres.Jeu">
+      <point x="-48.59999999999991" y="-123.5" />
+      <point x="119.90000000000009" y="3823.0" />
+      <point x="75.11859000825825" y="3823.0" />
+      <point x="75.11859000825825" y="1347.0" />
+      <point x="995.3964285714287" y="1347.0" />
+      <point x="-96.25" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonToby" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-134.5" />
+      <point x="1769.0464285714286" y="3813.0" />
+      <point x="1882.6464526562067" y="3813.0" />
+      <point x="1882.6464526562067" y="2895.0" />
+      <point x="972.5733519130201" y="2895.0" />
+      <point x="70.69999999999982" y="498.5" />
+    </edge>
+    <edge source="Autres.TableauTuiles" target="Autres.Detectives">
+      <point x="-72.375" y="-222.5" />
+      <point x="1283.0941852463538" y="337.0" />
+      <point x="1202.179761904762" y="337.0" />
+      <point x="0.0" y="123.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonTourner">
+      <point x="63.32142857142867" y="-178.5" />
+      <point x="998.8214285714287" y="4194.0" />
+      <point x="1506.0464285714286" y="4194.0" />
+      <point x="0.0" y="145.5" />
+    </edge>
+    <edge source="jetons.JetonTourner" target="Autres.Jeu">
+      <point x="48.59999999999985" y="-145.5" />
+      <point x="1554.6464285714285" y="3823.0" />
+      <point x="1687.4983519130203" y="3823.0" />
+      <point x="1687.4983519130203" y="1327.0" />
+      <point x="1175.0630952380955" y="1327.0" />
+      <point x="83.41666666666674" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonSherlock" target="jetons.Jetons">
+      <point x="97.20000000000005" y="-134.5" />
+      <point x="528.7" y="3773.0" />
+      <point x="932.7778867327268" y="3773.0" />
+      <point x="-95.46428571428578" y="102.5" />
+    </edge>
+    <edge source="jetons.JetonDetective" target="Autres.District">
+      <point x="-48.59999999999991" y="-145.5" />
+      <point x="1984.4464285714287" y="3743.0" />
+      <point x="1851.4945293146152" y="3743.0" />
+      <point x="1851.4945293146152" y="3468.0" />
+      <point x="1422.1858519130203" y="3468.0" />
+      <point x="93.625" y="211.5" />
+    </edge>
+    <edge source="jetons.JetonSherlock" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-134.5" />
+      <point x="431.5" y="3753.0" />
+      <point x="398.61859000825825" y="3753.0" />
+      <point x="398.61859000825825" y="2955.0" />
+      <point x="871.5733519130204" y="2955.0" />
+      <point x="-30.299999999999955" y="498.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonSherlock">
+      <point x="-35.17857142857156" y="-178.5" />
+      <point x="900.3214285714284" y="4174.0" />
+      <point x="431.5" y="4174.0" />
+      <point x="0.0" y="134.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonAlibi">
+      <point x="-77.39285714285711" y="-178.5" />
+      <point x="858.1071428571429" y="4204.0" />
+      <point x="25.500000000000114" y="4204.0" />
+      <point x="25.500000000000114" y="1848.0" />
+      <point x="891.6733519130203" y="1848.0" />
+      <point x="-97.20000000000005" y="200.5" />
+    </edge>
+    <edge source="jetons.JetonDetective" target="InterfaceGraphique.Main">
+      <point x="0.0" y="-145.5" />
+      <point x="2033.0464285714286" y="3833.0" />
+      <point x="2068.3464285714285" y="3833.0" />
+      <point x="2068.3464285714285" y="2885.0" />
+      <point x="992.7733519130202" y="2885.0" />
+      <point x="90.89999999999986" y="498.5" />
+    </edge>
+    <edge source="tour.TourImpairs" target="jetons.JetonToby">
+      <point x="77.39285714285711" y="-178.5" />
+      <point x="1012.8928571428571" y="4204.0" />
+      <point x="1769.0464285714286" y="4204.0" />
+      <point x="0.0" y="134.5" />
+    </edge>
+    <edge source="Autres.District" target="Autres.Jeu">
+      <point x="-10.700000000000045" y="-211.5" />
+      <point x="1317.8608519130203" y="2965.0" />
+      <point x="1302.2608519130204" y="2965.0" />
+      <point x="1302.2608519130204" y="1357.0" />
+      <point x="1136.5630952380955" y="1357.0" />
+      <point x="44.91666666666674" y="212.5" />
+    </edge>
+    <edge source="jetons.JetonAlibi" target="Autres.Jeu">
+      <point x="-1.1368683772161603E-13" y="-200.5" />
+      <point x="988.8733519130201" y="1397.0" />
+      <point x="1059.5630952380955" y="1397.0" />
+      <point x="-32.08333333333326" y="212.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7068587400559019" x="1030.0" y="470.2746670060236" />
+  <SelectedNodes>
+    <node>jetons.JetonEchanger</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
